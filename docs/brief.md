@@ -1,3 +1,11 @@
+---
+type: Brief
+title: Brief de Producto — SPOTTER
+description: Definición del producto, segmento, usuarios y supuestos de SPOTTER; documento vivo versionado por TP.
+tags: [producto, segmento, usuarios, supuestos]
+status: draft
+---
+
 # Brief — SPOTTER
 
 **Repositorio:** [gadsii-SPOTTER](https://github.com/gadsii-unlam/gadsii-SPOTTER)
@@ -7,6 +15,14 @@
 ## Versión 1 — TP1
 
 **Qué cambió respecto de la versión anterior y por qué:** Esta es la versión inicial del brief. Nace en el TP1 con la definición del producto y del segmento. No hay versión previa; se establece la línea base sobre la que se irá iterando en los TPs siguientes. Este es un documento vivo: cada versión se commitea y abre con un párrafo declarando qué cambió y por qué.
+
+> **Corrección post-devolución (25/08/2026):** la devolución del corrector observó que la
+> consigna pide **un solo** grupo de usuarios primario, no tres. Se resuelve: el usuario
+> primario único queda definido como **estudiantes con auto** (ver `### Usuario primario
+> elegido` más abajo). El roster de usuarios reales U1/U2/U3 —también observado por la
+> devolución, ya que dos de los tres no pertenecían a este grupo— se documenta en
+> [`docs/usuarios/usuarios-reales.md`](usuarios/usuarios-reales.md). Detalle completo de la
+> devolución en [`docs/referencias/tp1-devolucion.md`](referencias/tp1-devolucion.md).
 
 ---
 
@@ -60,11 +76,17 @@ Miembros activos de la comunidad UNLaM (estudiantes de grado y posgrado, docente
 - **Visitantes externos e invitados:** ajenos a la rutina universitaria (teatro, deportes); desconocen la dinámica de ocupación y buscan la tranquilidad de tener un lugar asegurado.
 - **Personal de seguridad (usuario operativo):** controlan accesos y egresos; buscan una herramienta que automatice la validación de patentes y reservas para agilizar su trabajo.
 
-### Usuario primario elegido (hipotético)
+### Usuario primario elegido
 
-Se eligen como grupo primario **personal de seguridad**, **docentes y personal académico**, y **estudiantes con auto**. Los estudiantes con auto y los docentes concentran el volumen principal de la demanda diaria de consulta y reserva, mientras que el personal de seguridad es indispensable por actuar como usuario operativo en los accesos.
+Grupo primario: **estudiantes con auto**. Es el grupo de mayor volumen de demanda diaria de
+consulta y reserva del estacionamiento, y el que permite un relevamiento homogéneo (una técnica,
+un instrumento, un mismo tipo de usuario) en el TP2. Docentes y personal de seguridad siguen
+caracterizados como grupos de usuarios del producto (ver arriba), pero no como foco primario del
+análisis de usuarios.
 
-> **Aclaración:** esta elección de usuario primario es todavía **hipotética**. Se validará en los TPs siguientes mediante el relevamiento y las pruebas del MVP con usuarios reales del segmento.
+> **Aclaración:** esta elección de usuario primario sigue siendo, en parte, una apuesta de
+> diseño: se validará con el relevamiento real del TP2. Lo que ya no es hipotético es que sea
+> **un solo grupo** (corrección post-devolución del TP1, ver arriba).
 
 ---
 
