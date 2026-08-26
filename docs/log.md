@@ -1,5 +1,13 @@
 # Registro de cambios — docs/
 
+## 2026-08-25 — TP1: reentrega post-devolución
+* **Update**: Se corrigen los dos puntos de la devolución del TP1. (1) Usuario primario único:
+  **estudiantes con auto**, actualizado en `docs/brief.md`. (2) Roster de U1/U2/U3: se
+  reemplaza a U2 (antes docente) y U3 (antes personal de seguridad) — que ya no pertenecían al
+  grupo primario corregido — por dos estudiantes con auto (Medicina y último año de Ingeniería
+  Electrónica); U1 (Ingeniería Informática) se mantiene sin cambios. Los tres con disponibilidad
+  confirmada para TP2 y TP5. Detalle en `docs/usuarios/usuarios-reales.md`.
+
 ## 2026-08-25
 * **Update**: Se resuelve la observación no excluyente de la devolución del TP1: el usuario
   primario único queda definido como **estudiantes con auto** (antes eran tres grupos

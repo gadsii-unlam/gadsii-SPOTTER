@@ -8,3 +8,4 @@ frontmatter (`sources`) de cada transcripción.
 * [tp2-consigna.md](tp2-consigna.md) - Enunciado del TP2 (Análisis de Usuarios e Hipótesis de Valor).
 * [tp1-entrega.md](tp1-entrega.md) - PDF entregado por el equipo para el TP1.
 * [tp1-devolucion.md](tp1-devolucion.md) - Devolución del corrector sobre el TP1.
+* [tp1-reentrega.md](tp1-reentrega.md) - Borrador de reentrega del TP1 (corrección post-devolución), listo para exportar a PDF.

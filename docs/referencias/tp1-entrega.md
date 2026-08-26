@@ -92,8 +92,10 @@ el producto resuelve un dolor que cruza transversalmente a toda la institución.
 - Disponibilidad para el TP5: Pendiente de confirmación.
 
 > Nota (agosto 2026): la devolución del corrector marcó esto como condición excluyente pendiente
-> — ver `referencias/tp1-devolucion.md`. Confirmar y documentar la disponibilidad real de U2 y
-> U3 es la corrección prioritaria antes de avanzar con el TP2.
+> — ver `referencias/tp1-devolucion.md`. **Resuelto:** este roster de U1/U2/U3 queda
+> reemplazado por el corregido en [`docs/usuarios/usuarios-reales.md`](../usuarios/usuarios-reales.md)
+> (los tres, ahora estudiantes con auto, con disponibilidad confirmada para TP2 y TP5). Esta
+> sección se conserva sin editar como registro histórico de lo que se entregó originalmente.
 
 ## El producto
 
@@ -175,9 +177,8 @@ de seguridad dentro del mismo núcleo, ya que actúan como el usuario operativo 
 accesos del estacionamiento.
 
 > Nota (agosto 2026): la devolución del corrector observó que la consigna pide **un solo** grupo
-> primario, no tres — ver `referencias/tp1-devolucion.md`. Resuelto para el TP2: el usuario
-> primario único queda definido como **estudiantes con auto** (ver `docs/log.md` y
-> `docs/usuarios/`).
+> primario, no tres — ver `referencias/tp1-devolucion.md`. **Resuelto:** el usuario primario
+> único queda definido como **estudiantes con auto** (ver `docs/brief.md` y `docs/log.md`).
 
 ## Los supuestos
 
