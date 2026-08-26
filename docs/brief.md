@@ -1,3 +1,11 @@
+---
+type: Brief
+title: Brief de Producto — SPOTTER
+description: Definición del producto, segmento, usuarios y supuestos de SPOTTER; documento vivo versionado por TP.
+tags: [producto, segmento, usuarios, supuestos]
+status: draft
+---
+
 # Brief — SPOTTER
 
 **Repositorio:** [gadsii-SPOTTER](https://github.com/gadsii-unlam/gadsii-SPOTTER)
