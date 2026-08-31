@@ -1,5 +1,20 @@
 # Registro de cambios — docs/
 
+## 2026-08-31 — TP2: entrega
+* **Update**: Se completa el TP2 con los hallazgos de las entrevistas a U1, U2 y U3, aplicadas
+  durante la semana del 25/08. Cambio de técnica respecto del borrador inicial: se pasó de
+  **encuesta** a **entrevistas semiestructuradas** (ver
+  `docs/usuarios/guia-entrevista-tp2.md`, reemplaza a `guia-encuesta-tp2.md`). Se completan
+  `docs/usuarios/perfil-usuario.md`, `docs/usuarios/supuestos-confrontacion.md` y
+  `docs/usuarios/hipotesis-valor.md`, y se agrega la transcripción anonimizada en
+  `docs/evidencia/tp2/entrevistas-transcripcion.md`.
+* **Hallazgo central**: el supuesto crítico del TP1 (disposición a reservar con anticipación) se
+  refuta parcialmente — los tres usuarios piden disponibilidad en tiempo real por playa y un
+  bloqueo de pocos minutos, no una reserva planificada desde su casa. El usuario primario
+  (estudiantes con auto) se confirma como correcto.
+* **Update**: `docs/brief.md` pasa a versión 2: perfil real, hipótesis de valor y estado de los
+  seis supuestos (incluyendo el crítico, que faltaba en el borrador de la entrega).
+
 ## 2026-08-25 — TP1: reentrega post-devolución
 * **Update**: Se corrigen los dos puntos de la devolución del TP1. (1) Usuario primario único:
   **estudiantes con auto**, actualizado en `docs/brief.md`. (2) Roster de U1/U2/U3: se
