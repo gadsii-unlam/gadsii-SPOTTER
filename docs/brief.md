@@ -26,6 +26,66 @@ status: draft
 
 ---
 
+## Versión 2 — TP2
+
+**Qué cambió respecto de la versión 1 y por qué:** se reemplaza el perfil hipotético de
+"estudiantes con auto" por el perfil real de U1, U2 y U3, construido a partir de entrevistas
+semiestructuradas aplicadas durante la semana del 25/08/2026 (ver
+[`docs/usuarios/guia-entrevista-tp2.md`](usuarios/guia-entrevista-tp2.md) y
+[`docs/evidencia/tp2/entrevistas-transcripcion.md`](evidencia/tp2/entrevistas-transcripcion.md)).
+El cambio más importante: el **supuesto crítico** del TP1 —que la comunidad está dispuesta a
+*planificar y reservar con anticipación*— se refuta parcialmente. Lo que los tres usuarios piden
+de forma consistente es información de ocupación **en tiempo real por playa** (no un dato
+agregado de "el estacionamiento") y, como máximo, un bloqueo del lugar por unos minutos mientras
+llegan — no una reserva armada con antelación desde su casa. Esto redirige el mecanismo central
+del producto: de un "motor de reservas por franjas horarias" a consulta de disponibilidad en
+tiempo real + bloqueo corto. También se incorporan hallazgos no previstos por el TP1: dos playas
+físicamente distintas (Perón y La Paz) en vez de un estacionamiento único, cierre de La Paz los
+sábados, estacionamiento indebido como salida de último recurso, y presión de demanda externa
+ajena a la comunidad UNLaM. Detalle completo en
+[`docs/usuarios/perfil-usuario.md`](usuarios/perfil-usuario.md),
+[`docs/usuarios/supuestos-confrontacion.md`](usuarios/supuestos-confrontacion.md) y
+[`docs/usuarios/hipotesis-valor.md`](usuarios/hipotesis-valor.md).
+
+---
+
+## Perfil de usuario real (TP2)
+
+Reemplaza al perfil hipotético de la versión 1. Usuario primario: **estudiantes con auto**,
+confirmado como correcto tras el relevamiento (los tres entrevistados, con carreras y horarios
+distintos, describen el mismo problema central).
+
+- **U1** (Arquitectura, 25 años, turno mañana): usa auto porque traslada maquetas. Pierde hasta
+  media hora dando vueltas, hace fila y a veces se queda sin lugar, y como último recurso deja el
+  auto mal estacionado.
+- **U2** (Kinesiología y Fisiatría, 22 años, 5 días/semana): espera hasta 20 minutos en las
+  cuadras previas a la playa Perón antes de saber si hay lugar; llega sistemáticamente 10-15
+  minutos tarde.
+- **U3** (Ingeniería Electrónica, 27 años, turno noche): decide entre dos playas (Perón y La Paz)
+  según el horario, sin información previa de ocupación; La Paz cierra los sábados.
+
+Perfil completo, necesidades, problemas y contexto de uso relevados en
+[`docs/usuarios/perfil-usuario.md`](usuarios/perfil-usuario.md).
+
+## Hipótesis de valor (TP2)
+
+**Creemos que** los estudiantes de la UNLaM que se trasladan en auto propio y cursan en horarios
+de alta demanda (mañana, mediodía o el turno noche cercano a las 18:30) **tiene el problema de**
+no saber, antes de encolarse o de recorrer las últimas cuadras, si alguna de las dos playas de
+estacionamiento (Perón o La Paz) tiene lugar disponible — lo que les hace perder entre 15 y 30
+minutos por viaje, llegar tarde a clase o a instancias de evaluación, y en los casos más extremos
+optar por estacionar de forma indebida en la calle. **Nuestra solución es** SPOTTER, una
+aplicación que muestra el nivel de ocupación en tiempo real de cada playa por separado, permite
+bloquear un lugar por unos minutos mientras el usuario se aproxima, y envía notificaciones
+ajustadas al horario de cursada de cada estudiante. **Sabremos que estamos en lo correcto
+cuando**, al validar el prototipo con U1, U2 y U3 en el TP5, al menos 2 de los 3 reporten haber
+elegido a qué playa dirigirse a partir de la información en tiempo real de la app, y ninguno
+reporte haber necesitado reservar con más de unos pocos minutos de anticipación. Desarrollo
+completo y trazabilidad en
+[`docs/usuarios/hipotesis-valor.md`](usuarios/hipotesis-valor.md).
+
+---
+
 ## Segmento elegido
 
 Miembros activos de la comunidad UNLaM (estudiantes de grado y posgrado, docentes, personal administrativo, de mantenimiento, limpieza y seguridad) de todos los turnos, y visitantes externos que concurren a actividades en el predio (deportivas o eventos en el teatro), que se trasladan a la universidad en **vehículo particular** (auto, moto o bicicleta) y necesitan gestionar con anticipación un espacio en el estacionamiento.
@@ -84,17 +144,21 @@ un instrumento, un mismo tipo de usuario) en el TP2. Docentes y personal de segu
 caracterizados como grupos de usuarios del producto (ver arriba), pero no como foco primario del
 análisis de usuarios.
 
-> **Aclaración:** esta elección de usuario primario sigue siendo, en parte, una apuesta de
-> diseño: se validará con el relevamiento real del TP2. Lo que ya no es hipotético es que sea
-> **un solo grupo** (corrección post-devolución del TP1, ver arriba).
+> **Validado en el TP2 (31/08/2026):** el relevamiento con U1, U2 y U3 confirma que
+> "estudiantes con auto" es el foco correcto — ver
+> [`docs/usuarios/supuestos-confrontacion.md`](usuarios/supuestos-confrontacion.md#el-usuario-primario-elegido-sigue-siendo-el-correcto).
+> Ya no es una apuesta de diseño sin contrastar.
 
 ---
 
 ## Supuestos
 
-- Los estudiantes en auto esperan de 10 a 15 minutos en horario pico para estacionar. *(Se comprueba midiendo con cronómetro la demora en la fila en una entrada.)*
-- No hay sistema de registro de autos en la UNLaM. *(Se comprueba con entrevistas al personal de seguridad operativa en las garitas.)*
-- Existen APIs para comunicarse con el sistema de alumnos/docentes de la UNLaM. *(Se comprueba consultando con el área de sistemas.)*
-- Hay cámaras que apuntan a la entrada y salida del estacionamiento. *(Se comprueba visitando cada acceso.)*
-- El personal de seguridad cuenta con conectividad a internet y un dispositivo móvil en las garitas para validar reservas en tiempo real. *(Se comprueba con observación directa y consultas al personal operativo.)*
-- **[CRÍTICO]** La comunidad universitaria está dispuesta a planificar y reservar su lugar con anticipación en lugar de buscarlo al llegar. *(Se confirmaría con entrevistas donde los usuarios afirmen preferir usar la app antes de salir de sus casas. Es crítico porque sostiene la viabilidad entera del proyecto: el éxito depende de que los usuarios adopten este nuevo comportamiento.)*
+Estado de cada supuesto tras el relevamiento del TP2 (detalle y evidencia en
+[`docs/usuarios/supuestos-confrontacion.md`](usuarios/supuestos-confrontacion.md)):
+
+- Los estudiantes en auto esperan de 10 a 15 minutos en horario pico para estacionar. — **Confirmado, con matices:** el piso del rango es correcto, pero buena parte de la demora ocurre en el acceso/calle antes de llegar a la playa, no sólo dentro de ella.
+- No hay sistema de registro de autos en la UNLaM. — **Sin evidencia (pendiente):** no verificable entrevistando estudiantes; depende de consultar a seguridad.
+- Existen APIs para comunicarse con el sistema de alumnos/docentes de la UNLaM. — **Sin evidencia (pendiente):** depende del área de sistemas.
+- Hay cámaras que apuntan a la entrada y salida del estacionamiento. — **Sin evidencia (pendiente):** depende de observación directa en los accesos.
+- El personal de seguridad cuenta con conectividad a internet y un dispositivo móvil en las garitas para validar reservas en tiempo real. — **Sin evidencia (pendiente):** depende de consultar al personal de seguridad.
+- **[CRÍTICO]** La comunidad universitaria está dispuesta a planificar y reservar su lugar con anticipación en lugar de buscarlo al llegar. — **Refutado (parcialmente):** los tres usuarios piden información de ocupación en tiempo real y, como máximo, un bloqueo de unos minutos al llegar — no una reserva planificada con antelación. Ver implicancia para el producto en la Hipótesis de valor (TP2) más arriba.
