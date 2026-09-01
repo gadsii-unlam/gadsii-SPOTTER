@@ -1,23 +1,23 @@
 ---
 type: Concepto
 title: Perfil de usuario — TP2
-description: Perfil real de U1, U2 y U3 (estudiantes con auto), construido a partir de las entrevistas del TP2.
+description: Perfil real de U1, U2 y U3 (estudiantes con auto), construido a partir de la encuesta del TP2.
 tags: [tp2, usuarios]
 status: stable
 sources:
   - id: evidencia-tp2
-    resource: /docs/evidencia/tp2/entrevistas-transcripcion.md
-    title: Transcripción de entrevistas — TP2
-  - id: guia-entrevista
-    resource: /docs/usuarios/guia-entrevista-tp2.md
-    title: Guía de entrevista — TP2
+    resource: /docs/evidencia/tp2/encuesta-respuestas.md
+    title: Respuestas de la encuesta — TP2
+  - id: guia-encuesta
+    resource: /docs/usuarios/guia-encuesta-tp2.md
+    title: Guía de encuesta — TP2
 ---
 
 # Perfil de usuario — TP2
 
 Usuario primario: **estudiantes con auto**. Perfil construido a partir de las respuestas de U1,
-U2 y U3 a la entrevista semiestructurada (ver
-[`docs/evidencia/tp2/entrevistas-transcripcion.md`](../evidencia/tp2/entrevistas-transcripcion.md)).
+U2 y U3 a la encuesta con preguntas abiertas (ver
+[`docs/evidencia/tp2/encuesta-respuestas.md`](../evidencia/tp2/encuesta-respuestas.md)).
 
 ## U1
 - Rol / relación con el segmento: estudiante de 4to año de Arquitectura, 25 años, cursa al turno
@@ -61,11 +61,11 @@ U2 y U3 a la entrevista semiestructurada (ver
 ## Síntesis del grupo primario
 
 Tres perfiles con carreras, edades y horarios de cursada distintos (mañana, variable, noche), que
-describen el mismo problema con las mismas variables: dos playas físicamente separadas (Perón y
-La Paz) con distinto costo de caminata, decisiones tomadas a último momento con información
-incompleta, y una pérdida sistemática de 15 a 30 minutos por viaje. Los tres tienen adopción
-tecnológica media o alta — adoptarían una app si resuelve el problema — y los tres reportan
-conectividad inconsistente justo en la zona donde más la necesitarían. Ninguno describe querer
-planificar o reservar con anticipación (desde el día anterior o antes de salir de casa): lo que
-piden es información de ocupación en tiempo real y, como máximo, un bloqueo de unos minutos
-mientras se aproximan.
+describen un mismo problema central: decisiones tomadas a último momento con información
+incompleta. U2 y U3 explicitan la elección entre dos playas físicamente separadas (Perón y La
+Paz), y U1 y U2 reportan demoras de entre 10 y 30 minutos. Los tres tienen adopción
+tecnológica media o alta — adoptarían una app si resuelve el problema — pero la conectividad es
+dispar: U1 reporta saturación ocasional, U2 buena señal en los alrededores y U3 señal muy mala.
+No apareció una necesidad explícita de planificar o reservar con horas o días de anticipación:
+los tres piden información inmediata de disponibilidad y U1, además, propone un bloqueo de cinco
+minutos mientras se aproxima.
