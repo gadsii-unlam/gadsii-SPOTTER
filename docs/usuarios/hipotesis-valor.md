@@ -16,11 +16,11 @@ sources:
 # Hipótesis de valor
 
 **Creemos que** los estudiantes de la UNLaM que se trasladan en auto propio y cursan en horarios
-de alta demanda (mañana, mediodía o el turno noche cercano a las 18:30)
+de alta demanda (turno mañana o noche, según los perfiles relevados)
 
-**tiene el problema de** no saber, antes de encolarse o de recorrer las últimas cuadras, si alguna
-de las dos playas de estacionamiento (Perón o La Paz) tiene lugar disponible — lo que les hace
-perder entre 15 y 30 minutos por viaje, llegar tarde a clase o a instancias de evaluación, y en
+**tienen el problema de** no saber, antes de encolarse o de recorrer las últimas cuadras, si alguna
+de las dos playas de estacionamiento (Perón o La Paz) tiene lugar disponible — lo que puede
+generar demoras de hasta 30 minutos, llegadas tarde a clase o a instancias de evaluación y, en
 los casos más extremos optar por estacionar de forma indebida en la calle.
 
 **Nuestra solución es** SPOTTER, una aplicación que muestra el nivel de ocupación en tiempo real
@@ -40,9 +40,9 @@ anticipación.
 - Problema real → citas de U1 ("hago la fila... me quedo sin lugar"), U2 ("casi 20 min esperando",
   "termino llegando 10/15 min tarde") y U3 ("llegar y no encontrar lugar... en el estacionamiento
   más cercano") en
-  [`docs/evidencia/tp2/entrevistas-transcripcion.md`](../evidencia/tp2/entrevistas-transcripcion.md).
+  [`docs/evidencia/tp2/encuesta-respuestas.md`](../evidencia/tp2/encuesta-respuestas.md).
 - Solución ajustada → refutación (parcial) del supuesto crítico de reserva anticipada, ver
   [`supuestos-confrontacion.md`](supuestos-confrontacion.md): la app se orienta a tiempo real +
   bloqueo corto, no a reserva por franja horaria con antelación.
-- Evidencia medible → deriva directamente de las necesidades relevadas en la pregunta 8-9 del
-  guion (información de ocupación antes de llegar, para decidir a qué playa dirigirse).
+- Evidencia medible → deriva directamente de las necesidades relevadas en las preguntas 8 y 9
+  del cuestionario (información de ocupación antes de llegar, para decidir a qué playa dirigirse).

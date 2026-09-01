@@ -1,22 +1,22 @@
 ---
 type: Evidencia
-title: Transcripción de entrevistas — TP2
-description: Transcripción anonimizada de las entrevistas semiestructuradas aplicadas a U1, U2 y U3, según el guion en docs/usuarios/guia-entrevista-tp2.md.
-tags: [tp2, evidencia, entrevistas]
+title: Respuestas de la encuesta — TP2
+description: Respuestas anonimizadas de la encuesta con preguntas abiertas aplicada a U1, U2 y U3, según el cuestionario en docs/usuarios/guia-encuesta-tp2.md.
+tags: [tp2, evidencia, encuesta]
 status: stable
 sources:
-  - id: guia-entrevista
-    resource: /docs/usuarios/guia-entrevista-tp2.md
-    title: Guía de entrevista — TP2
+  - id: guia-encuesta
+    resource: /docs/usuarios/guia-encuesta-tp2.md
+    title: Guía de encuesta — TP2
 ---
 
-# Transcripción de entrevistas — TP2
+# Respuestas de la encuesta — TP2
 
 Relevamiento realizado durante la semana del 25/08/2026 a U1, U2 y U3 (estudiantes con auto,
 grupo primario — ver [`docs/usuarios/usuarios-reales.md`](../../usuarios/usuarios-reales.md)).
-Técnica: entrevistas semiestructuradas, guion completo en
-[`docs/usuarios/guia-entrevista-tp2.md`](../../usuarios/guia-entrevista-tp2.md). Las respuestas
-se transcriben tal como se relevaron, sin nombres, caras ni datos de contacto.
+Técnica: encuesta con preguntas abiertas, cuestionario completo en
+[`docs/usuarios/guia-encuesta-tp2.md`](../../usuarios/guia-encuesta-tp2.md). Las respuestas se
+registran sin nombres, caras ni datos de contacto.
 
 ## Respuestas — USUARIO 1
 

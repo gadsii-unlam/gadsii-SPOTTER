@@ -1,19 +1,21 @@
 # Registro de cambios — docs/
 
 ## 2026-08-31 — TP2: entrega
-* **Update**: Se completa el TP2 con los hallazgos de las entrevistas a U1, U2 y U3, aplicadas
-  durante la semana del 25/08. Cambio de técnica respecto del borrador inicial: se pasó de
-  **encuesta** a **entrevistas semiestructuradas** (ver
-  `docs/usuarios/guia-entrevista-tp2.md`, reemplaza a `guia-encuesta-tp2.md`). Se completan
+* **Update**: Se completa el TP2 con los hallazgos de la encuesta con preguntas abiertas aplicada
+  a U1, U2 y U3 durante la semana del 25/08 (ver
+  `docs/usuarios/guia-encuesta-tp2.md`). Se completan
   `docs/usuarios/perfil-usuario.md`, `docs/usuarios/supuestos-confrontacion.md` y
-  `docs/usuarios/hipotesis-valor.md`, y se agrega la transcripción anonimizada en
-  `docs/evidencia/tp2/entrevistas-transcripcion.md`.
+  `docs/usuarios/hipotesis-valor.md`, y se agregan las respuestas anonimizadas en
+  `docs/evidencia/tp2/encuesta-respuestas.md`.
 * **Hallazgo central**: el supuesto crítico del TP1 (disposición a reservar con anticipación) se
-  refuta parcialmente — los tres usuarios piden disponibilidad en tiempo real por playa y un
-  bloqueo de pocos minutos, no una reserva planificada desde su casa. El usuario primario
-  (estudiantes con auto) se confirma como correcto.
+  refuta parcialmente — los tres usuarios piden disponibilidad inmediata, U2 y U3 la requieren
+  por playa y U1 propone un bloqueo de pocos minutos, no una reserva planificada desde su casa.
+  El usuario primario (estudiantes con auto) se confirma como correcto.
 * **Update**: `docs/brief.md` pasa a versión 2: perfil real, hipótesis de valor y estado de los
   seis supuestos (incluyendo el crítico, que faltaba en el borrador de la entrega).
+* **Corrección de consistencia**: el roster tentativo del TP1 se reemplaza por los perfiles que
+  efectivamente respondieron la encuesta (Arquitectura, Kinesiología e Ingeniería Electrónica),
+  se corrige el análisis de conectividad y se alinea la documentación con `TP2-SPOTTER.md`.
 
 ## 2026-08-25 — TP1: reentrega post-devolución
 * **Update**: Se corrigen los dos puntos de la devolución del TP1. (1) Usuario primario único:
