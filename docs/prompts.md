@@ -7,6 +7,8 @@
 | 27/08/2026 | Gemini | Refinamiento del cuestionario de preguntas abiertas y consulta sobre la cobertura total de los puntos del trabajo. Refinamiento de vocabulario para que las preguntas no induzcan respuestas. | TP2 |
 | 31/08/2026 | Claude | A partir de las respuestas ya cargadas de la encuesta a U1, U2 y U3, estructurar el perfil de usuario, completar la tabla de confrontación de supuestos (incluyendo el supuesto crítico, faltante en el borrador), redactar la hipótesis de valor, actualizar `docs/brief.md` a versión 2 y completar las secciones 3, 4 y 5 de `TP2-SPOTTER.md`. Cada hallazgo se sostiene en una respuesta de la encuesta; no se generaron necesidades ni frustraciones no relevadas. | TP2 |
 | 07/09/2026 | Claude | Generación de tres alternativas estructurales de wireframes de baja fidelidad en un único HTML navegable para el MVP de SPOTTER. Se solicitó priorizar eficiencia (Alt A), prevención de errores (Alt B) y facilidad de aprendizaje (Alt C) basándose en el brief v3, definiendo las pantallas clave (mapa, detalle, error de conexión) y pidiendo anotaciones que fundamenten las decisiones. (ver anexo para el detalle completo) | TP3 |
+| 19/09/2026 | Claude 3.5 Sonnet | Evaluación heurística automatizada del wireframe y Brief v3 del equipo evaluado (Bananza) utilizando las 10 heurísticas de Nielsen. Generación de tabla con número, heurística, descripción, severidad (1-4) y mejora sugerida para `docs/evaluacion/evaluacion-ia.md`. (ver anexo para el detalle completo) | TP4A |
+| 21/09/2026 | Gemini | Asistencia en la confrontación y redacción del informe de evaluación (TP4A). A partir de la tabla heurística elaborada por el equipo y la devuelta por la IA sobre Bananza, se redactó el análisis comparativo y el informe final para el equipo evaluado. | TP4A |
 
 
 
@@ -58,3 +60,33 @@
 > 
 > ESTRUCTURA DEL ARCHIVO
 > Un HTML con las tres alternativas separadas y claramente rotuladas (A, B, C), cada una con su flujo navegable interno. Sin dependencias externas ni CDNS todo el CSS en un <style>.
+
+
+## Anexo: Prompts Completos TP4A
+
+**Fecha:** 19/09/2026  
+**Herramienta:** Claude 3.5 Sonnet  
+
+**Prompt enviado:**
+> Actuá como un evaluador experto en usabilidad e Interacción Humano-Computadora (HCI).
+> Vas a realizar una evaluación heurística sobre un wireframe de baja fidelidad en HTML/JS correspondiente al MVP de "UNLaMigos" (adjunto como index.html), tomando como marco de referencia su Brief de Producto (adjunto como brief.md).
+> 
+> Pautas metodológicas obligatorias:
+> Contexto y perfil: La evaluación debe realizarse estrictamente desde la perspectiva del usuario real definido en el brief (estudiante de Ingeniería en Informática de la UNLaM que trabaja, cursa varias materias en paralelo y busca materiales en ventanas acotadas de tiempo) y su contexto de uso (escritorio en el hogar).
+> Alcance (Scope): Es un wireframe de un MVP. Un elemento o funcionalidad que quedó explícitamente fuera del scope en el brief (ej. integración real con UNLaM, calificaciones/reseñas, app móvil) NO debe ser marcado como problema de usabilidad.
+> Heurísticas: Utilizá las 10 heurísticas de Jakob Nielsen.
+> Escala de severidad (1 a 4):
+> Cosmético: no es necesario corregirlo salvo que sobre tiempo.
+> Menor: baja prioridad de corrección.
+> Mayor: alta prioridad, impacta la experiencia del usuario.
+> Catastrófico: debe corregirse antes de avanzar.
+> Importante: La severidad es relativa a este perfil concreto. Justificá la severidad asignada en función del impacto en las tareas y tiempo del usuario.
+> 
+> Formato de salida requerido:
+> Presentá los hallazgos en una tabla Markdown con las siguientes columnas exactas:
+> | # | Heurística incumplida | Descripción del problema | Severidad (1-4) | Mejora sugerida |
+> 
+> Al finalizar la tabla, incluí una sección evaluando brevemente si el diseño respeta los tres atributos de usabilidad priorizados por el equipo en su brief:
+> Eficiencia
+> Facilidad de aprendizaje
+> Baja tasa de errores
