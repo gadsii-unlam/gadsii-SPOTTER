@@ -1,5 +1,41 @@
 # Registro de cambios — docs/
 
+## 2026-10-25 — Mantenimiento de la wiki
+* **Update**: Se completan en este log las entradas de TP3 y TP4, que se habían commiteado sin
+  registrarse acá. Se agregan `docs/diseno/index.md` y `docs/evaluacion/index.md`, frontmatter
+  en `docs/evaluacion/perfil-evaluado.md`, y se corrige la descripción de `evaluacion/` en
+  `docs/index.md` (contiene la evaluación cruzada del TP4, no sólo la del TPI).
+* **Pendiente detectado**: (1) `docs/usuarios/usuarios-reales.md` sigue con la disponibilidad
+  de U1, U2 y U3 para el TP5 "pendiente de reconfirmación". (2) Las correcciones del TP4 que
+  recibimos sobre nuestro wireframe no están en el repo; el TP5 pide construir incorporando las
+  aceptadas. (3) `docs/brief.md` v3 mantiene alertas y bloqueo corto como "funcionalidades
+  core" y habla de "semáforo", mientras el scope v3 los excluye y el wireframe final usa
+  niveles en grises (LLENO / MEDIO / LIBRE / CERRADA); a resolver en el brief v4 (TP5).
+
+## 2026-09-21 — TP4: evaluación cruzada
+* **Creation**: Punto 1 del TP4 (Rodrigo): `docs/evaluacion/perfil-evaluado.md`, perfil de
+  usuario del producto del equipo evaluado (UNLaMigos).
+* **Creation**: Punto 3 del TP4 (Mayra, asistido por IA): `docs/evaluacion/evaluacion-ia.md`,
+  evaluación heurística (Nielsen) generada con IA sobre el wireframe y el brief del equipo
+  evaluado, con lectura de los tres atributos de usabilidad que ese equipo priorizó.
+* **Update**: `docs/prompts.md` registra los prompts del TP4A (evaluación con IA y redacción del
+  informe comparativo).
+
+## 2026-09-07 — TP3: wireframes del MVP
+* **Creation**: `docs/diseno/alternativas-recibidas.html`: las tres alternativas estructurales
+  generadas con IA (A eficiencia, B prevención de errores, C facilidad de aprendizaje).
+* **Creation**: `docs/diseno/wireframe/mvp.html`: wireframe final, **alternativa A**
+  desarrollada. Cuatro pantallas: mapa (apertura), detalle de playa, sin conexión / dato viejo
+  y sábado con La Paz cerrada. Niveles representados con etiqueta y trama de grises; la app
+  informa y no recomienda.
+* **Update**: `docs/prompts.md` registra el prompt completo de los wireframes (anexo TP3).
+
+## 2026-09-05 — TP3: brief versión 3
+* **Update**: `docs/brief.md` pasa a versión 3. El MVP se reduce a la consulta de ocupación en
+  tiempo real por playa (Perón y La Paz), con datos simulados por horario. Quedan fuera la
+  reserva anticipada por franjas, motos y bicicletas, login y onboarding. Atributos de
+  usabilidad priorizados: eficiencia y tasa de errores.
+
 ## 2026-08-31 — TP2: entrega
 * **Update**: Se completa el TP2 con los hallazgos de la encuesta con preguntas abiertas aplicada
   a U1, U2 y U3 durante la semana del 25/08 (ver

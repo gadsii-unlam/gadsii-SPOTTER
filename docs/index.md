@@ -22,7 +22,7 @@ frontmatter, índices y un historial a esa misma estructura.
 * [referencias/](referencias/) - Consignas, entregas y devoluciones de la cátedra, transcriptas a Markdown.
 * [usuarios/](usuarios/) - Perfil de usuario e hipótesis de valor (TP2).
 * [evidencia/](evidencia/) - Evidencia de relevamiento por TP (fotos, notas, encuestas, transcripciones).
-* [diseno/](diseno/) - Diseño y wireframes (TP3 en adelante).
+* [diseno/](diseno/) - Alternativas y wireframe final del MVP (TP3 en adelante).
 * [arquitectura/](arquitectura/) - Arquitectura técnica (TP6 en adelante).
 * [configuracion/](configuracion/) - Gestión de configuración (TP7).
-* [evaluacion/](evaluacion/) - Evaluación final (TPI).
+* [evaluacion/](evaluacion/) - Evaluación cruzada del TP4 (sobre el producto de otro equipo) y evaluación final (TPI).
