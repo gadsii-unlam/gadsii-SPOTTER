@@ -6,6 +6,7 @@ también acá.
 
 * [perfil-evaluado.md](perfil-evaluado.md) - TP4, punto 1: perfil de usuario y atributos priorizados del producto evaluado (UNLaMigos).
 * [evaluacion-ia.md](evaluacion-ia.md) - TP4, punto 3: evaluación heurística (Nielsen) generada con IA sobre el wireframe y el brief del equipo evaluado. Prompt en el anexo TP4A de [../prompts.md](../prompts.md).
+* [tp5-metricas.md](tp5-metricas.md) - TP5, punto 1: métricas accionables, métrica vanidosa y criterio de éxito, definidos antes de construir el MVP.
 
 **Falta:** las correcciones que recibimos sobre el wireframe de SPOTTER, y cuáles acepta el
 equipo para el MVP del TP5.

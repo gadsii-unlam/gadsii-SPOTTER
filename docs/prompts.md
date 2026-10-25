@@ -9,6 +9,7 @@
 | 07/09/2026 | Claude | Generación de tres alternativas estructurales de wireframes de baja fidelidad en un único HTML navegable para el MVP de SPOTTER. Se solicitó priorizar eficiencia (Alt A), prevención de errores (Alt B) y facilidad de aprendizaje (Alt C) basándose en el brief v3, definiendo las pantallas clave (mapa, detalle, error de conexión) y pidiendo anotaciones que fundamenten las decisiones. (ver anexo para el detalle completo) | TP3 |
 | 19/09/2026 | Claude 3.5 Sonnet | Evaluación heurística automatizada del wireframe y Brief v3 del equipo evaluado (Bananza) utilizando las 10 heurísticas de Nielsen. Generación de tabla con número, heurística, descripción, severidad (1-4) y mejora sugerida para `docs/evaluacion/evaluacion-ia.md`. (ver anexo para el detalle completo) | TP4A |
 | 21/09/2026 | Gemini | Asistencia en la confrontación y redacción del informe de evaluación (TP4A). A partir de la tabla heurística elaborada por el equipo y la devuelta por la IA sobre Bananza, se redactó el análisis comparativo y el informe final para el equipo evaluado. | TP4A |
+| 25/10/2026 | Claude Code (Claude Opus 5.5) | Borrador de métricas y criterio de éxito a partir de la consigna del TP5, la hipótesis del TP2, la encuesta y el wireframe final; chequeo de coherencia con el brief y la wiki y actualización de `log.md` e índices. Las métricas quedan como propuesta: la decisión final es del equipo. | TP5 |
 
 
 

@@ -1,5 +1,13 @@
 # Registro de cambios — docs/
 
+## 2026-10-25 — TP5: métricas y criterio de éxito
+* **Creation**: `docs/evaluacion/tp5-metricas.md` (borrador, a validar por el equipo): M1
+  redirección por el dato (negocio), M2 decisión correcta en ≤10 s sin ayuda (usabilidad),
+  visitas/aperturas como métrica vanidosa, y criterio de confirmación/refutación. Se commitea
+  antes de empezar el MVP, como pide la consigna. M1 se mide contra la decisión que el usuario
+  tomaría sin la app en cada escenario, no contra una "playa habitual": la encuesta del TP2
+  muestra que U3 decide por horario y que el plan B de U1 es la calle.
+
 ## 2026-10-25 — Mantenimiento de la wiki
 * **Update**: Se completan en este log las entradas de TP3 y TP4, que se habían commiteado sin
   registrarse acá. Se agregan `docs/diseno/index.md` y `docs/evaluacion/index.md`, frontmatter
