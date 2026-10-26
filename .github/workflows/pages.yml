@@ -1,9 +1,9 @@
-# Publica el MVP (src/) en GitHub Pages en cada push a main.
+# Publica el MVP (src/) en GitHub Pages en cada push a main (y a feat/tp5 mientras dure el TP5).
 name: Deploy MVP
 
 on:
   push:
-    branches: [main]
+    branches: [main, feat/tp5] # ponytail: sacar feat/tp5 cuando se mergee a main
   workflow_dispatch:
 
 permissions:
