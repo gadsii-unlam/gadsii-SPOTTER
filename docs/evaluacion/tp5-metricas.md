@@ -3,7 +3,7 @@ type: Concepto
 title: Métricas y criterio de éxito — TP5
 description: Métricas accionables, métrica vanidosa y criterio de confirmación/refutación de la hipótesis del TP2, definidos antes de construir el MVP.
 tags: [tp5, metricas, hipotesis]
-status: draft
+status: stable
 sources:
   - id: hipotesis-valor
     resource: /docs/usuarios/hipotesis-valor.md
@@ -18,7 +18,7 @@ sources:
 
 # Métricas y criterio de éxito — TP5
 
-> **Estado: propuesta a validar por el equipo.** El borrador se armó con asistencia de IA (ver
+> **Estado: validado por el equipo el 26/10/2026.** El borrador se armó con asistencia de IA (ver
 > `docs/prompts.md`); la consigna no delega las métricas ni el criterio. Este archivo se
 > commitea **antes de escribir la primera línea del MVP** y no se edita después de la prueba.
 
