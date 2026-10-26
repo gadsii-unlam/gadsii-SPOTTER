@@ -310,14 +310,24 @@ body {
 .lot[data-state="closed"] { --lot-bg: var(--closed); --lot-ink: var(--closed-ink); --lot-pattern: var(--pattern-closed); }
 
 .lot__head {
+  position: relative;
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  gap: var(--s-2);
-  font-size: var(--text-lg);
-  font-weight: 700;
+  justify-content: center;
+  min-height: 2.25rem;
+  font-size: var(--text-2xl);
+  font-weight: 800;
   letter-spacing: 0.04em;
   text-transform: uppercase;
+}
+
+/* Flecha y etiqueta a la derecha sin descentrar el nombre. */
+.lot__head > .icon,
+.lot__head > .tag {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
 .lot__state {

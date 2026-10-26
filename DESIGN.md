@@ -35,8 +35,8 @@ typography:
     letterSpacing: "0.02em"
   title:
     fontFamily: "Open Sans, system-ui, sans-serif"
-    fontSize: "1.125rem"
-    fontWeight: 700
+    fontSize: "1.75rem"
+    fontWeight: 800
     letterSpacing: "0.04em"
   body:
     fontFamily: "Open Sans, system-ui, sans-serif"
@@ -144,7 +144,7 @@ neutros. El verde de marca es azulado y no se usa como fondo grande.
 
 - **Estado** (800, clamp 2–3rem según el ancho del bloque, mayúsculas): la palabra LLENO / MEDIO / LIBRE / CERRADA.
 - **Marca** (800, 1.375rem): "SPOTTER" en el header.
-- **Título de playa** (700, 1.125rem, mayúsculas, tracking 0.04em).
+- **Nombre de playa** (800, 1.75rem, mayúsculas, tracking 0.04em, centrado en el bloque).
 - **Texto** (400, 1rem–1.125rem, interlineado 1.5): consecuencias y avisos.
 - **Meta / leyenda** (0.875rem): antigüedad del dato, cifras tabulares.
 
@@ -168,7 +168,7 @@ Radio de 16px en bloques de playa, 10px en botones, avisos y paneles, 4px en las
 
 ## Components
 
-- **Bloque de playa** (`.lot[data-state]`): nombre arriba, estado enorme abajo, flecha si lleva al detalle. Trama a 45°: densa (LLENO), media (MEDIO), cruzada (CERRADA); LIBRE va lisa (decisión del equipo). Al tocar, escala a 0.985.
+- **Bloque de playa** (`.lot[data-state]`): nombre arriba y centrado, estado enorme abajo, flecha si lleva al detalle. Trama a 45°: densa (LLENO), media (MEDIO), cruzada (CERRADA); LIBRE va lisa (decisión del equipo). Al tocar, escala a 0.985.
 - **Dato viejo** (`.lot.is-stale`): desaturado, opacidad 0.72, borde punteado y etiqueta "Dato viejo". Nunca se oculta ni se bloquea.
 - **Header** (`.app-header`): SPOTTER a la izquierda; antigüedad del dato (negrita) y día/hora a la derecha; botón Actualizar de solo ícono. Mientras actualiza, el ícono gira y el dato anterior sigue a la vista.
 - **Botones** (`.btn--primary`, `.btn--secondary`): 48px de alto, peso 700; deshabilitado al 45% de opacidad. En el detalle solo existe el botón hacia la otra playa.
