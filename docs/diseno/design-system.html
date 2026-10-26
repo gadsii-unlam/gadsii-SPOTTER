@@ -75,21 +75,21 @@
   </div>
 
   <h2>Tipografía</h2>
-  <p>Una sola familia, Open Sans, servida desde el proyecto. Escala fija en rem; solo la palabra de estado crece con el ancho de la pantalla.</p>
-  <div class="type-row"><code>Estado 3rem/800</code><span style="font-size:var(--text-state);font-weight:800;line-height:1">LIBRE</span></div>
+  <p>Una sola familia, Open Sans, servida desde el proyecto. Escala fija en rem; solo el nombre de la playa crece con el ancho del bloque.</p>
+  <div class="type-row"><code>Playa 3rem/800</code><span style="font-size:var(--text-state);font-weight:800;line-height:1">PERÓN</span></div>
   <div class="type-row"><code>Marca 1.375rem/800</code><span class="brand">SPOTTER</span></div>
-  <div class="type-row"><code>Playa 1.125rem/700</code><span style="font-size:var(--text-lg);font-weight:700;letter-spacing:.04em">PERÓN</span></div>
+  <div class="type-row"><code>Estado 1.75rem/800</code><span style="font-size:var(--text-2xl);font-weight:800;letter-spacing:.04em">LLENO</span></div>
   <div class="type-row"><code>Texto 1.125rem/400</code><span style="font-size:var(--text-lg)">No hay lugar. Vas a hacer fila para entrar.</span></div>
   <div class="type-row"><code>Meta 0.875rem/400</code><span style="font-size:var(--text-sm);color:var(--ink-2)">Martes 08:42</span></div>
 
   <h2>Bloque de playa</h2>
   <p>El componente central. Ocupa la mayor parte de la pantalla y se toca para ver el detalle.</p>
   <div class="lots-demo">
-    <a class="lot" href="#" data-state="full"><span class="lot__head">Perón <svg class="icon"><use href="#i-next"/></svg></span><span class="lot__state">Lleno</span></a>
-    <a class="lot" href="#" data-state="mid"><span class="lot__head">Perón <svg class="icon"><use href="#i-next"/></svg></span><span class="lot__state">Medio</span></a>
-    <a class="lot" href="#" data-state="free"><span class="lot__head">La Paz <svg class="icon"><use href="#i-next"/></svg></span><span class="lot__state">Libre</span></a>
-    <a class="lot" href="#" data-state="closed"><span class="lot__head">La Paz <svg class="icon"><use href="#i-next"/></svg></span><span><span class="lot__state">Cerrada</span><span class="lot__note">No abre los sábados</span></span></a>
-    <a class="lot is-stale" href="#" data-state="free"><span class="lot__head">La Paz <span class="tag">Dato viejo</span></span><span class="lot__state">Libre</span></a>
+    <a class="lot" href="#" data-state="full"><span class="lot__head">Lleno <svg class="icon"><use href="#i-next"/></svg></span><span class="lot__name">Perón</span></a>
+    <a class="lot" href="#" data-state="mid"><span class="lot__head">Medio <svg class="icon"><use href="#i-next"/></svg></span><span class="lot__name">Perón</span></a>
+    <a class="lot" href="#" data-state="free"><span class="lot__head">Libre <svg class="icon"><use href="#i-next"/></svg></span><span class="lot__name">La Paz</span></a>
+    <a class="lot" href="#" data-state="closed"><span class="lot__head">Cerrada <svg class="icon"><use href="#i-next"/></svg></span><span><span class="lot__name">La Paz</span><span class="lot__note">No abre los sábados</span></span></a>
+    <a class="lot is-stale" href="#" data-state="free"><span class="lot__head">Libre <span class="tag">Dato viejo</span></span><span class="lot__name">La Paz</span></a>
   </div>
   <p class="caption">Los cuatro estados y el estado “dato viejo” (atenuado, borde punteado, etiqueta).</p>
 
@@ -132,8 +132,8 @@
       <div class="app">
         <header class="app-header"><p class="brand">SPOTTER</p><p class="data-age"><strong>Dato de hace 1 min</strong>Martes 08:42</p><button class="btn btn-refresh" aria-label="Actualizar"><svg class="icon"><use href="#i-refresh"/></svg></button></header>
         <div class="app-main">
-          <a class="lot" href="#" data-state="full"><span class="lot__head">Perón <svg class="icon"><use href="#i-next"/></svg></span><span class="lot__state">Lleno</span></a>
-          <a class="lot" href="#" data-state="free"><span class="lot__head">La Paz <svg class="icon"><use href="#i-next"/></svg></span><span class="lot__state">Libre</span></a>
+          <a class="lot" href="#" data-state="full"><span class="lot__head">Lleno <svg class="icon"><use href="#i-next"/></svg></span><span class="lot__name">Perón</span></a>
+          <a class="lot" href="#" data-state="free"><span class="lot__head">Libre <svg class="icon"><use href="#i-next"/></svg></span><span class="lot__name">La Paz</span></a>
         </div>
         <ul class="legend"><li><span class="swatch" data-state="full"></span>Lleno</li><li><span class="swatch" data-state="mid"></span>Medio</li><li><span class="swatch" data-state="free"></span>Libre</li></ul>
       </div>
@@ -144,7 +144,7 @@
       <div class="app">
         <header class="app-header"><a class="btn-back" href="#" aria-label="Volver al mapa"><svg class="icon"><use href="#i-back"/></svg></a><p class="brand">SPOTTER</p><p class="data-age"><strong>Dato de hace 1 min</strong>Martes 08:42</p><button class="btn btn-refresh" aria-label="Actualizar"><svg class="icon"><use href="#i-refresh"/></svg></button></header>
         <div class="app-main">
-          <div class="lot detail-state" data-state="full"><span class="lot__head">Perón</span><span class="lot__state">Lleno</span></div>
+          <div class="lot detail-state" data-state="full"><span class="lot__head">Lleno</span><span class="lot__name">Perón</span></div>
           <div class="detail-body">
             <p class="consequence">No hay lugar. Vas a hacer fila para entrar y es probable que tengas que salir y manejar hasta la otra playa.</p>
             <a class="btn btn--primary btn--block" href="#">Ver La Paz <svg class="icon"><use href="#i-next"/></svg></a>
@@ -161,8 +161,8 @@
         <header class="app-header"><p class="brand">SPOTTER</p><p class="data-age is-stale"><strong>Dato de hace 12 min</strong>Martes 08:30</p><button class="btn btn-refresh" aria-label="Actualizar"><svg class="icon"><use href="#i-refresh"/></svg></button></header>
         <div class="app-main">
           <div class="notice" role="status"><svg class="icon"><use href="#i-offline"/></svg><p>Sin conexión. Estás viendo el dato de hace 12 min y pudo cambiar. Se reintenta solo.</p></div>
-          <a class="lot is-stale" href="#" data-state="full"><span class="lot__head">Perón <span class="tag">Dato viejo</span></span><span class="lot__state">Lleno</span></a>
-          <a class="lot is-stale" href="#" data-state="free"><span class="lot__head">La Paz <span class="tag">Dato viejo</span></span><span class="lot__state">Libre</span></a>
+          <a class="lot is-stale" href="#" data-state="full"><span class="lot__head">Lleno <span class="tag">Dato viejo</span></span><span class="lot__name">Perón</span></a>
+          <a class="lot is-stale" href="#" data-state="free"><span class="lot__head">Libre <span class="tag">Dato viejo</span></span><span class="lot__name">La Paz</span></a>
         </div>
         <ul class="legend"><li><span class="swatch" data-state="full"></span>Lleno</li><li><span class="swatch" data-state="mid"></span>Medio</li><li><span class="swatch" data-state="free"></span>Libre</li></ul>
       </div>
@@ -173,8 +173,8 @@
       <div class="app">
         <header class="app-header"><p class="brand">SPOTTER</p><p class="data-age"><strong>Dato de hace 1 min</strong>Sábado 10:15</p><button class="btn btn-refresh" aria-label="Actualizar"><svg class="icon"><use href="#i-refresh"/></svg></button></header>
         <div class="app-main">
-          <a class="lot" href="#" data-state="mid"><span class="lot__head">Perón <svg class="icon"><use href="#i-next"/></svg></span><span class="lot__state">Medio</span></a>
-          <a class="lot" href="#" data-state="closed"><span class="lot__head">La Paz <svg class="icon"><use href="#i-next"/></svg></span><span><span class="lot__state">Cerrada</span><span class="lot__note">No abre los sábados</span></span></a>
+          <a class="lot" href="#" data-state="mid"><span class="lot__head">Medio <svg class="icon"><use href="#i-next"/></svg></span><span class="lot__name">Perón</span></a>
+          <a class="lot" href="#" data-state="closed"><span class="lot__head">Cerrada <svg class="icon"><use href="#i-next"/></svg></span><span><span class="lot__name">La Paz</span><span class="lot__note">No abre los sábados</span></span></a>
         </div>
         <ul class="legend"><li><span class="swatch" data-state="full"></span>Lleno</li><li><span class="swatch" data-state="mid"></span>Medio</li><li><span class="swatch" data-state="free"></span>Libre</li><li><span class="swatch" data-state="closed"></span>Cerrada</li></ul>
       </div>

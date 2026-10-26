@@ -14,9 +14,9 @@
       "closed": { "role": "state", "displayName": "CERRADA", "canonical": "#3b3d3c" }
     },
     "typographyMeta": {
-      "state": { "displayName": "Estado", "purpose": "Palabra de estado dentro del bloque de playa; escala con el ancho del bloque." },
+      "lot-name": { "displayName": "Nombre de playa", "purpose": "PERÓN / LA PAZ, grande y centrado abajo del bloque; escala con el ancho del bloque." },
       "brand": { "displayName": "Marca", "purpose": "SPOTTER en el header." },
-      "title": { "displayName": "Título de playa", "purpose": "Nombre de la playa en mayúsculas." },
+      "state": { "displayName": "Estado", "purpose": "LLENO / MEDIO / LIBRE / CERRADA, arriba y centrado en el bloque." },
       "body": { "displayName": "Texto", "purpose": "Consecuencias y avisos." },
       "label": { "displayName": "Meta", "purpose": "Antigüedad del dato y leyenda." }
     },

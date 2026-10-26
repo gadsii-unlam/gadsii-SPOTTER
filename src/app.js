@@ -52,8 +52,8 @@ function renderHeader() {
 function lot(id, { link }) {
   const state = app.data[id];
   const stale = offline();
-  const head = `<span class="lot__head">${LOTS[id]} ${stale ? '<span class="tag">Dato viejo</span>' : link ? icon("next") : ""}</span>`;
-  const body = `<span><span class="lot__state">${STATE_LABEL[state]}</span>${state === "closed" ? '<span class="lot__note">No abre los sábados</span>' : ""}</span>`;
+  const head = `<span class="lot__head">${STATE_LABEL[state]} ${stale ? '<span class="tag">Dato viejo</span>' : link ? icon("next") : ""}</span>`;
+  const body = `<span><span class="lot__name">${LOTS[id]}</span>${state === "closed" ? '<span class="lot__note">No abre los sábados</span>' : ""}</span>`;
   const cls = `lot${link ? "" : " detail-state"}${stale ? " is-stale" : ""}`;
   return link
     ? `<a class="${cls}" data-state="${state}" href="#/${id}" aria-label="${LOTS[id]}: ${STATE_LABEL[state]}. Ver detalle">${head}${body}</a>`

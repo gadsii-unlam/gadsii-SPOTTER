@@ -289,7 +289,7 @@ body {
   border: 0;
   border-radius: var(--radius-lg);
   font: inherit;
-  text-align: left;
+  text-align: center;
   text-decoration: none;
   color: var(--lot-ink);
   background-color: var(--lot-bg);
@@ -321,16 +321,21 @@ body {
   text-transform: uppercase;
 }
 
-/* Flecha y etiqueta a la derecha sin descentrar el nombre. */
-.lot__head > .icon,
-.lot__head > .tag {
+/* Flecha a la derecha sin descentrar el estado. */
+.lot__head > .icon {
   position: absolute;
   right: 0;
   top: 50%;
   transform: translateY(-50%);
 }
 
-.lot__state {
+/* Dato viejo: la etiqueta va debajo del estado para no pisarlo en bloques angostos. */
+.lot.is-stale .lot__head {
+  flex-direction: column;
+  gap: var(--s-1);
+}
+
+.lot__name {
   display: block;
   font-size: var(--text-state);
   font-weight: 800;
