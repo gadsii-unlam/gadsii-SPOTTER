@@ -1,5 +1,17 @@
 # Registro de cambios — docs/
 
+## 2026-10-26 — TP5: MVP construido (local)
+* **Creation**: `src/index.html`, `src/app.js`, `src/data.js` y `tests/data.test.mjs`. Mapa,
+  detalle, sin conexión y sábado, con las correcciones del TP4. Versión genérica (datos simulados
+  según día y hora) y escenarios del moderador por URL, documentados en el `README.md`.
+
+## 2026-10-26 — TP5: sistema de diseño
+* **Creation**: `PRODUCT.md` y `DESIGN.md` en la raíz (formato de la skill Impeccable),
+  `src/styles.css` con tokens y componentes, y `docs/diseno/design-system.html` con los
+  especímenes y las cuatro pantallas del MVP. Estilo institucional UNLaM (Open Sans, verde,
+  blanco y gris); se descartan el bordó (se confunde con LLENO) y el logo (haría pasar la app por
+  oficial y podría inflar M1). Incorpora las correcciones del TP4 que entran al MVP.
+
 ## 2026-10-26 — TP4: documentos de la evaluación cruzada
 * **Creation**: Se transcriben a `docs/referencias/` la consigna del TP4, nuestro informe sobre
   Bananza (TP4A), el informe que UNLaM-Gym hizo sobre SPOTTER y nuestra respuesta (TP4B). El
