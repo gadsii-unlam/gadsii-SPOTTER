@@ -25,21 +25,21 @@ el roster tentativo confeccionado antes del relevamiento.
 - **Rol dentro del segmento:** estudiante de 4.º año de Arquitectura, 25 años; asiste en auto al
   turno mañana cuatro veces por semana.
 - **Participación en el TP2:** encuesta respondida durante la semana del 25/08/2026.
-- **Disponibilidad para el TP5:** pendiente de reconfirmación.
+- **Disponibilidad para el TP5:** confirmada (26/10/2026).
 
 ## U2
 
 - **Rol dentro del segmento:** estudiante de Licenciatura en Kinesiología y Fisiatría, 22 años;
   asiste en auto cinco días por semana.
 - **Participación en el TP2:** encuesta respondida durante la semana del 25/08/2026.
-- **Disponibilidad para el TP5:** pendiente de reconfirmación.
+- **Disponibilidad para el TP5:** confirmada (26/10/2026).
 
 ## U3
 
 - **Rol dentro del segmento:** estudiante de Ingeniería Electrónica, 27 años; asiste en auto
   aproximadamente cuatro veces por semana, habitualmente en turno noche.
 - **Participación en el TP2:** encuesta respondida durante la semana del 25/08/2026.
-- **Disponibilidad para el TP5:** pendiente de reconfirmación.
+- **Disponibilidad para el TP5:** confirmada (26/10/2026).
 
 ## Verificación de pertenencia al grupo primario
 

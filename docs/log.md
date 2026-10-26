@@ -1,5 +1,17 @@
 # Registro de cambios — docs/
 
+## 2026-10-26 — TP4: documentos de la evaluación cruzada
+* **Creation**: Se transcriben a `docs/referencias/` la consigna del TP4, nuestro informe sobre
+  Bananza (TP4A), el informe que UNLaM-Gym hizo sobre SPOTTER y nuestra respuesta (TP4B). El
+  informe de UNLaM-Gym se transcribe a mano y su PDF no se versiona: incluye DNI y correos de
+  otro equipo y el repositorio es público.
+* **Update**: `docs/evaluacion/index.md` resume las correcciones del TP4 que entran al MVP del
+  TP5 (semáforo + trama + etiqueta, leyenda única con MEDIO, botón sólo hacia la otra playa,
+  refresco manual, header único) y las que quedan para después. Resuelve el pendiente (2) del
+  25/10.
+* **Update**: `docs/usuarios/usuarios-reales.md`: disponibilidad de U1, U2 y U3 para el TP5
+  confirmada. Resuelve el pendiente (1) del 25/10.
+
 ## 2026-10-25 — TP5: métricas y criterio de éxito
 * **Creation**: `docs/evaluacion/tp5-metricas.md` (borrador, a validar por el equipo): M1
   redirección por el dato (negocio), M2 decisión correcta en ≤10 s sin ayuda (usabilidad),
