@@ -34,11 +34,12 @@
   --closed-ink: #ffffff;
 
   --tag-bg: #000000a6;
-  --hatch: rgb(255 255 255 / 0.17);
-  --hatch-dark: rgb(0 0 0 / 0.14);
-  --pattern-full: repeating-linear-gradient(-45deg, var(--hatch) 0 6px, transparent 6px 12px);
-  --pattern-mid: repeating-linear-gradient(-45deg, var(--hatch-dark) 0 6px, transparent 6px 22px);
-  --pattern-free: none;
+  /* Trama del wireframe del TP3: densa = LLENO, media = MEDIO, rala = LIBRE, cruzada = CERRADA. */
+  --hatch: rgb(255 255 255 / 0.22);
+  --hatch-dark: rgb(0 0 0 / 0.18);
+  --pattern-full: repeating-linear-gradient(45deg, var(--hatch) 0 5px, transparent 5px 10px);
+  --pattern-mid: repeating-linear-gradient(45deg, var(--hatch-dark) 0 3px, transparent 3px 12px);
+  --pattern-free: repeating-linear-gradient(45deg, var(--hatch) 0 1.5px, transparent 1.5px 12px);
   --pattern-closed:
     repeating-linear-gradient(45deg, var(--hatch) 0 3px, transparent 3px 14px),
     repeating-linear-gradient(-45deg, var(--hatch) 0 3px, transparent 3px 14px);
@@ -253,16 +254,25 @@ body {
   }
 }
 
-.back-link {
-  align-self: flex-start;
+/* Volver: en el header, a la izquierda de la marca, para no correr el bloque de playa. */
+.btn-back {
   display: inline-flex;
   align-items: center;
-  gap: var(--s-1);
-  min-height: var(--tap);
-  padding-right: var(--s-3);
+  justify-content: center;
+  width: var(--tap);
+  height: var(--tap);
+  margin: calc(var(--s-2) * -1) calc(var(--s-2) * -1) calc(var(--s-2) * -1) calc(var(--s-3) * -1);
+  border-radius: var(--radius);
   color: var(--ink);
-  font-weight: 700;
-  text-decoration: none;
+}
+
+.btn-back[hidden] {
+  display: none;
+}
+
+.btn-back .icon {
+  width: 1.75rem;
+  height: 1.75rem;
 }
 
 /* Bloque de playa: la señal. Color + trama + palabra. */
@@ -402,9 +412,23 @@ body {
 
 /* Detalle de playa */
 .detail-state {
-  min-height: 0;
-  flex: none;
   cursor: default;
+}
+
+/* Detalle: el bloque ocupa la misma mitad que en el mapa; abajo, consecuencia y acciones. */
+.detail-state,
+.detail-body {
+  flex: 1 1 0;
+}
+
+.detail-body {
+  display: flex;
+  flex-direction: column;
+  gap: var(--s-3);
+}
+
+.detail-body .consequence {
+  flex: 1;
 }
 
 .detail-state:active {

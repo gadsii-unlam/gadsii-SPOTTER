@@ -69,8 +69,8 @@
   </div>
   <div class="row" style="margin-top:16px">
     <div class="chip" style="--c: var(--full); --p: var(--pattern-full)"><i></i><div><b>LLENO</b><code>#c62828 · trama densa</code></div></div>
-    <div class="chip" style="--c: var(--mid); --p: var(--pattern-mid)"><i></i><div><b>MEDIO</b><code>#f2a900 · trama abierta</code></div></div>
-    <div class="chip" style="--c: var(--free)"><i></i><div><b>LIBRE</b><code>#1e7e34 · sin trama</code></div></div>
+    <div class="chip" style="--c: var(--mid); --p: var(--pattern-mid)"><i></i><div><b>MEDIO</b><code>#f2a900 · trama media</code></div></div>
+    <div class="chip" style="--c: var(--free); --p: var(--pattern-free)"><i></i><div><b>LIBRE</b><code>#1e7e34 · trama rala</code></div></div>
     <div class="chip" style="--c: var(--closed); --p: var(--pattern-closed)"><i></i><div><b>CERRADA</b><code>#3b3d3c · trama cruzada</code></div></div>
   </div>
 
@@ -112,7 +112,7 @@
     <button class="btn btn--primary">Ver La Paz <svg class="icon"><use href="#i-next"/></svg></button>
     <button class="btn btn--secondary">Volver al mapa</button>
     <button class="btn btn--primary" disabled>Deshabilitado</button>
-    <a class="back-link" href="#"><svg class="icon"><use href="#i-back"/></svg>Mapa</a>
+    <a class="btn-back" href="#" aria-label="Volver al mapa"><svg class="icon"><use href="#i-back"/></svg></a>
   </div>
 
   <h3>Aviso sin conexión</h3>
@@ -142,13 +142,14 @@
 
     <figure class="phone" style="margin:0">
       <div class="app">
-        <header class="app-header"><p class="brand">SPOTTER</p><p class="data-age"><strong>Dato de hace 1 min</strong>Martes 08:42</p><button class="btn btn-refresh" aria-label="Actualizar"><svg class="icon"><use href="#i-refresh"/></svg></button></header>
+        <header class="app-header"><a class="btn-back" href="#" aria-label="Volver al mapa"><svg class="icon"><use href="#i-back"/></svg></a><p class="brand">SPOTTER</p><p class="data-age"><strong>Dato de hace 1 min</strong>Martes 08:42</p><button class="btn btn-refresh" aria-label="Actualizar"><svg class="icon"><use href="#i-refresh"/></svg></button></header>
         <div class="app-main">
-          <a class="back-link" href="#"><svg class="icon"><use href="#i-back"/></svg>Mapa</a>
           <div class="lot detail-state" data-state="full"><span class="lot__head">Perón</span><span class="lot__state">Lleno</span></div>
-          <p class="consequence">No hay lugar. Vas a hacer fila para entrar y es probable que tengas que salir y manejar hasta la otra playa.</p>
-          <a class="btn btn--primary btn--block" href="#">Ver La Paz <svg class="icon"><use href="#i-next"/></svg></a>
-          <a class="btn btn--secondary btn--block" href="#">Volver al mapa</a>
+          <div class="detail-body">
+            <p class="consequence">No hay lugar. Vas a hacer fila para entrar y es probable que tengas que salir y manejar hasta la otra playa.</p>
+            <a class="btn btn--primary btn--block" href="#">Ver La Paz <svg class="icon"><use href="#i-next"/></svg></a>
+            <a class="btn btn--secondary btn--block" href="#">Volver al mapa</a>
+          </div>
         </div>
         <ul class="legend"><li><span class="swatch" data-state="full"></span>Lleno</li><li><span class="swatch" data-state="mid"></span>Medio</li><li><span class="swatch" data-state="free"></span>Libre</li></ul>
       </div>

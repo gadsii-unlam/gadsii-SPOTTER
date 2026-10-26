@@ -168,11 +168,12 @@ Radio de 16px en bloques de playa, 10px en botones, avisos y paneles, 4px en las
 
 ## Components
 
-- **Bloque de playa** (`.lot[data-state]`): nombre arriba, estado enorme abajo, flecha si lleva al detalle. Trama: densa (LLENO), abierta (MEDIO), ninguna (LIBRE), cruzada (CERRADA). Al tocar, escala a 0.985.
+- **Bloque de playa** (`.lot[data-state]`): nombre arriba, estado enorme abajo, flecha si lleva al detalle. Trama del wireframe del TP3, a 45°: densa (LLENO), media (MEDIO), rala (LIBRE), cruzada (CERRADA). Al tocar, escala a 0.985.
 - **Dato viejo** (`.lot.is-stale`): desaturado, opacidad 0.72, borde punteado y etiqueta "Dato viejo". Nunca se oculta ni se bloquea.
 - **Header** (`.app-header`): SPOTTER a la izquierda; antigüedad del dato (negrita) y día/hora a la derecha; botón Actualizar de solo ícono. Mientras actualiza, el ícono gira y el dato anterior sigue a la vista.
 - **Botones** (`.btn--primary`, `.btn--secondary`): 48px de alto, peso 700; deshabilitado al 45% de opacidad. En el detalle solo existe el botón hacia la otra playa.
-- **Volver** (`.back-link`): "‹ Mapa" arriba a la izquierda, siempre en la misma posición; "Volver al mapa" abajo como segunda salida.
+- **Volver** (`.btn-back`): "‹" en el header, a la izquierda de SPOTTER, solo en el detalle; no corre el contenido. "Volver al mapa" abajo como segunda salida.
+- **Detalle**: el bloque de la playa ocupa la misma mitad superior que en el mapa; consecuencia y botones en la mitad inferior.
 - **Aviso sin conexión** (`.notice`): bloque neutro invertido con ícono; texto que nombra el problema y que se reintenta solo.
 - **Leyenda** (`.legend`): la misma en todas las pantallas; suma CERRADA cuando aplica.
 

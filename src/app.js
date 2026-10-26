@@ -69,15 +69,17 @@ function notice() {
 function render() {
   const id = location.hash.replace("#/", "");
   const view = $("view");
+  $("back").hidden = !LOTS[id];
   if (LOTS[id]) {
     const other = id === "peron" ? "lapaz" : "peron";
     view.innerHTML = `
-      <a class="back-link" href="#/">${icon("back")}Mapa</a>
       ${notice()}
       ${lot(id, { link: false })}
-      <p class="consequence">${CONSEQUENCE[app.data[id]]}</p>
-      <a class="btn btn--primary btn--block" href="#/${other}">Ver ${LOTS[other]} ${icon("next")}</a>
-      <a class="btn btn--secondary btn--block" href="#/">Volver al mapa</a>`;
+      <div class="detail-body">
+        <p class="consequence">${CONSEQUENCE[app.data[id]]}</p>
+        <a class="btn btn--primary btn--block" href="#/${other}">Ver ${LOTS[other]} ${icon("next")}</a>
+        <a class="btn btn--secondary btn--block" href="#/">Volver al mapa</a>
+      </div>`;
   } else {
     view.innerHTML = `${notice()}${lot("peron", { link: true })}${lot("lapaz", { link: true })}`;
   }
