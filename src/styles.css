@@ -34,12 +34,12 @@
   --closed-ink: #ffffff;
 
   --tag-bg: #000000a6;
-  /* Trama del wireframe del TP3: densa = LLENO, media = MEDIO, rala = LIBRE, cruzada = CERRADA. */
+  /* Trama: densa = LLENO, media = MEDIO, cruzada = CERRADA. LIBRE va lisa: la ausencia de trama también dice algo. */
   --hatch: rgb(255 255 255 / 0.22);
   --hatch-dark: rgb(0 0 0 / 0.18);
   --pattern-full: repeating-linear-gradient(45deg, var(--hatch) 0 5px, transparent 5px 10px);
   --pattern-mid: repeating-linear-gradient(45deg, var(--hatch-dark) 0 3px, transparent 3px 12px);
-  --pattern-free: repeating-linear-gradient(45deg, var(--hatch) 0 1.5px, transparent 1.5px 12px);
+  --pattern-free: none;
   --pattern-closed:
     repeating-linear-gradient(45deg, var(--hatch) 0 3px, transparent 3px 14px),
     repeating-linear-gradient(-45deg, var(--hatch) 0 3px, transparent 3px 14px);

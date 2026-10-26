@@ -168,7 +168,7 @@ Radio de 16px en bloques de playa, 10px en botones, avisos y paneles, 4px en las
 
 ## Components
 
-- **Bloque de playa** (`.lot[data-state]`): nombre arriba, estado enorme abajo, flecha si lleva al detalle. Trama del wireframe del TP3, a 45°: densa (LLENO), media (MEDIO), rala (LIBRE), cruzada (CERRADA). Al tocar, escala a 0.985.
+- **Bloque de playa** (`.lot[data-state]`): nombre arriba, estado enorme abajo, flecha si lleva al detalle. Trama a 45°: densa (LLENO), media (MEDIO), cruzada (CERRADA); LIBRE va lisa (decisión del equipo). Al tocar, escala a 0.985.
 - **Dato viejo** (`.lot.is-stale`): desaturado, opacidad 0.72, borde punteado y etiqueta "Dato viejo". Nunca se oculta ni se bloquea.
 - **Header** (`.app-header`): SPOTTER a la izquierda; antigüedad del dato (negrita) y día/hora a la derecha; botón Actualizar de solo ícono. Mientras actualiza, el ícono gira y el dato anterior sigue a la vista.
 - **Botones** (`.btn--primary`, `.btn--secondary`): 48px de alto, peso 700; deshabilitado al 45% de opacidad. En el detalle solo existe el botón hacia la otra playa.
