@@ -1,0 +1,470 @@
+/* SPOTTER — tokens y componentes. Lo usan el MVP (src/) y los especímenes (docs/diseno/). */
+
+@font-face {
+  font-family: "Open Sans";
+  src: url("fonts/open-sans-latin-wght-normal.woff2") format("woff2");
+  font-weight: 300 800;
+  font-display: swap;
+}
+
+:root {
+  color-scheme: light dark;
+
+  /* Identidad UNLaM: verde, blanco y gris. Nunca para estados. */
+  --brand: #009476;
+  --brand-strong: #0f7957;
+  --brand-hover: #0b6448;
+  --brand-text: #0f7957;
+
+  --ground: #f3f4f3;
+  --surface: #ffffff;
+  --ink: #111111;
+  --ink-2: #5f6361;
+  --line: #dfe2e0;
+  --focus: #0f7957;
+
+  /* Estado de ocupación: color + trama + palabra, siempre juntos. */
+  --full: #c62828;
+  --full-ink: #ffffff;
+  --mid: #f2a900;
+  --mid-ink: #111111;
+  --free: #1e7e34;
+  --free-ink: #ffffff;
+  --closed: #3b3d3c;
+  --closed-ink: #ffffff;
+
+  --tag-bg: #000000a6;
+  /* Trama: densa = LLENO, media = MEDIO, cruzada = CERRADA. LIBRE va lisa: la ausencia de trama también dice algo. */
+  --hatch: rgb(255 255 255 / 0.22);
+  --hatch-dark: rgb(0 0 0 / 0.18);
+  --pattern-full: repeating-linear-gradient(45deg, var(--hatch) 0 5px, transparent 5px 10px);
+  --pattern-mid: repeating-linear-gradient(45deg, var(--hatch-dark) 0 3px, transparent 3px 12px);
+  --pattern-free: none;
+  --pattern-closed:
+    repeating-linear-gradient(45deg, var(--hatch) 0 3px, transparent 3px 14px),
+    repeating-linear-gradient(-45deg, var(--hatch) 0 3px, transparent 3px 14px);
+
+  --font: "Open Sans", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --text-sm: 0.875rem;
+  --text-md: 1rem;
+  --text-lg: 1.125rem;
+  --text-xl: 1.375rem;
+  --text-2xl: 1.75rem;
+  --text-state: clamp(2rem, 17cqi, 3rem);
+
+  --s-1: 4px;
+  --s-2: 8px;
+  --s-3: 12px;
+  --s-4: 16px;
+  --s-5: 24px;
+  --s-6: 32px;
+  --s-7: 48px;
+
+  --radius-sm: 4px;
+  --radius: 10px;
+  --radius-lg: 16px;
+  --tap: 48px;
+  --shadow: 0 1px 2px rgb(0 0 0 / 0.08), 0 4px 12px rgb(0 0 0 / 0.06);
+  --ease: cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --brand-text: #3cc39f;
+    --ground: #111314;
+    --surface: #1b1e1f;
+    --ink: #f1f3f2;
+    --ink-2: #a8afac;
+    --line: #2d3233;
+    --focus: #3cc39f;
+    --shadow: 0 1px 2px rgb(0 0 0 / 0.4);
+  }
+}
+
+:root[data-theme="dark"] {
+  --brand-text: #3cc39f;
+  --ground: #111314;
+  --surface: #1b1e1f;
+  --ink: #f1f3f2;
+  --ink-2: #a8afac;
+  --line: #2d3233;
+  --focus: #3cc39f;
+  --shadow: 0 1px 2px rgb(0 0 0 / 0.4);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--ground);
+  color: var(--ink);
+  font-family: var(--font);
+  font-size: var(--text-md);
+  line-height: 1.5;
+  -webkit-text-size-adjust: 100%;
+}
+
+::selection {
+  background: var(--brand);
+  color: #fff;
+}
+
+:focus-visible {
+  outline: 3px solid var(--focus);
+  outline-offset: 3px;
+}
+
+.icon {
+  width: 1.25em;
+  height: 1.25em;
+  flex: none;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+/* App shell: header, contenido que llena, leyenda al pie. */
+.app {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  min-height: 100dvh;
+  max-width: 480px;
+  margin-inline: auto;
+  background: var(--ground);
+}
+
+.app-header {
+  display: flex;
+  align-items: center;
+  gap: var(--s-3);
+  padding: var(--s-3) var(--s-4);
+  background: var(--surface);
+  border-bottom: 1px solid var(--line);
+}
+
+.brand {
+  font-weight: 800;
+  font-size: var(--text-xl);
+  letter-spacing: 0.02em;
+  color: var(--brand-text);
+  margin: 0;
+}
+
+.data-age {
+  flex: 1;
+  min-width: 0;
+  margin: 0;
+  text-align: right;
+  font-size: var(--text-sm);
+  line-height: 1.3;
+  color: var(--ink-2);
+  font-variant-numeric: tabular-nums;
+}
+
+.data-age strong {
+  display: block;
+  color: var(--ink);
+  font-weight: 700;
+}
+
+.app-main {
+  display: flex;
+  flex-direction: column;
+  gap: var(--s-3);
+  padding: var(--s-4);
+}
+
+/* Botones */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--s-2);
+  min-height: var(--tap);
+  padding: 0 var(--s-4);
+  border: 2px solid transparent;
+  border-radius: var(--radius);
+  font: inherit;
+  font-weight: 700;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color 150ms var(--ease), border-color 150ms var(--ease), transform 150ms var(--ease);
+}
+
+.btn:active {
+  transform: scale(0.98);
+}
+
+.btn--primary {
+  background: var(--brand-strong);
+  color: #fff;
+}
+
+.btn--primary:hover {
+  background: var(--brand-hover);
+}
+
+.btn--secondary {
+  background: var(--surface);
+  border-color: var(--line);
+  color: var(--ink);
+}
+
+.btn--secondary:hover {
+  border-color: var(--ink-2);
+}
+
+.btn--block {
+  width: 100%;
+}
+
+.btn:disabled,
+.btn[aria-disabled="true"] {
+  opacity: 0.45;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* Actualizar: solo ícono en el header, gira mientras carga sin vaciar la pantalla. */
+.btn-refresh {
+  min-width: var(--tap);
+  padding: 0;
+  background: transparent;
+  color: var(--brand-text);
+  border-color: var(--line);
+}
+
+.btn-refresh:hover {
+  border-color: var(--brand-text);
+}
+
+.btn-refresh[aria-busy="true"] .icon {
+  animation: spin 900ms linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Volver: en el header, a la izquierda de la marca, para no correr el bloque de playa. */
+.btn-back {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: var(--tap);
+  height: var(--tap);
+  margin: calc(var(--s-2) * -1) calc(var(--s-2) * -1) calc(var(--s-2) * -1) calc(var(--s-3) * -1);
+  border-radius: var(--radius);
+  color: var(--ink);
+}
+
+.btn-back[hidden] {
+  display: none;
+}
+
+.btn-back .icon {
+  width: 1.75rem;
+  height: 1.75rem;
+}
+
+/* Bloque de playa: la señal. Color + trama + palabra. */
+.lot {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: var(--s-4);
+  width: 100%;
+  min-height: 9.5rem;
+  flex: 1;
+  padding: var(--s-4) var(--s-5);
+  border: 0;
+  border-radius: var(--radius-lg);
+  font: inherit;
+  text-align: center;
+  text-decoration: none;
+  color: var(--lot-ink);
+  background-color: var(--lot-bg);
+  background-image: var(--lot-pattern);
+  box-shadow: var(--shadow);
+  container-type: inline-size;
+  cursor: pointer;
+  transition: transform 150ms var(--ease), filter 150ms var(--ease);
+}
+
+.lot:active {
+  transform: scale(0.985);
+}
+
+.lot[data-state="full"] { --lot-bg: var(--full); --lot-ink: var(--full-ink); --lot-pattern: var(--pattern-full); }
+.lot[data-state="mid"] { --lot-bg: var(--mid); --lot-ink: var(--mid-ink); --lot-pattern: var(--pattern-mid); }
+.lot[data-state="free"] { --lot-bg: var(--free); --lot-ink: var(--free-ink); --lot-pattern: var(--pattern-free); }
+.lot[data-state="closed"] { --lot-bg: var(--closed); --lot-ink: var(--closed-ink); --lot-pattern: var(--pattern-closed); }
+
+.lot__head {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 2.25rem;
+  font-size: var(--text-2xl);
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+/* Flecha a la derecha sin descentrar el estado. */
+.lot__head > .icon {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+/* Dato viejo: la etiqueta va debajo del estado para no pisarlo en bloques angostos. */
+.lot.is-stale .lot__head {
+  flex-direction: column;
+  gap: var(--s-1);
+}
+
+.lot__name {
+  display: block;
+  font-size: var(--text-state);
+  font-weight: 800;
+  line-height: 1;
+  letter-spacing: 0.01em;
+  text-transform: uppercase;
+}
+
+.lot__note {
+  display: block;
+  margin-top: var(--s-2);
+  font-size: var(--text-md);
+  font-weight: 600;
+}
+
+/* Dato viejo: atenuado y con borde punteado, nunca oculto ni bloqueado. */
+.lot.is-stale {
+  filter: saturate(0.35);
+  opacity: 0.72;
+  outline: 3px dashed var(--ink);
+  outline-offset: -3px;
+}
+
+.tag {
+  display: inline-flex;
+  align-items: center;
+  padding: 2px var(--s-2);
+  border-radius: 999px;
+  background: var(--tag-bg);
+  color: #fff;
+  font-size: var(--text-sm);
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  text-transform: none;
+}
+
+/* Leyenda única: la misma en todas las pantallas. */
+.legend {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--s-2) var(--s-4);
+  margin: 0;
+  padding: var(--s-3) var(--s-4) var(--s-4);
+  list-style: none;
+  font-size: var(--text-sm);
+  font-weight: 700;
+  color: var(--ink-2);
+}
+
+.legend li {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--s-2);
+}
+
+.swatch {
+  width: 1.25rem;
+  height: 1.25rem;
+  border-radius: var(--radius-sm);
+  background-color: var(--lot-bg);
+  background-image: var(--lot-pattern);
+}
+
+.swatch[data-state="full"] { --lot-bg: var(--full); --lot-pattern: var(--pattern-full); }
+.swatch[data-state="mid"] { --lot-bg: var(--mid); --lot-pattern: var(--pattern-mid); }
+.swatch[data-state="free"] { --lot-bg: var(--free); --lot-pattern: var(--pattern-free); }
+.swatch[data-state="closed"] { --lot-bg: var(--closed); --lot-pattern: var(--pattern-closed); }
+
+/* Aviso no bloqueante (sin conexión). Neutro: el ámbar es MEDIO. */
+.notice {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--s-3);
+  padding: var(--s-3) var(--s-4);
+  border-radius: var(--radius);
+  background: var(--ink);
+  color: var(--surface);
+  font-size: var(--text-md);
+}
+
+.notice p {
+  margin: 0;
+}
+
+.notice .icon {
+  margin-top: 2px;
+}
+
+/* Detalle de playa */
+.detail-state {
+  cursor: default;
+}
+
+/* Detalle: el bloque ocupa la misma mitad que en el mapa; abajo, consecuencia y acciones. */
+.detail-state,
+.detail-body {
+  flex: 1 1 0;
+}
+
+.detail-body {
+  display: flex;
+  flex-direction: column;
+  gap: var(--s-3);
+}
+
+.detail-body .consequence {
+  flex: 1;
+}
+
+.detail-state:active {
+  transform: none;
+}
+
+.consequence {
+  margin: 0;
+  padding: var(--s-4);
+  border-radius: var(--radius);
+  background: var(--surface);
+  border: 1px solid var(--line);
+  font-size: var(--text-lg);
+  line-height: 1.45;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    transition: none !important;
+    animation: none !important;
+  }
+}
