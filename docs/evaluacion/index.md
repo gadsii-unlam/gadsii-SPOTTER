@@ -7,6 +7,7 @@ del TPI va a vivir también acá.
 * [perfil-evaluado.md](perfil-evaluado.md) - TP4, punto 1: perfil de usuario y atributos priorizados del producto evaluado (UNLaMigos).
 * [evaluacion-ia.md](evaluacion-ia.md) - TP4, punto 3: evaluación heurística (Nielsen) generada con IA sobre el wireframe y el brief del equipo evaluado. Prompt en el anexo TP4A de [../prompts.md](../prompts.md).
 * [tp5-metricas.md](tp5-metricas.md) - TP5, punto 1: métricas accionables, métrica vanidosa y criterio de éxito, definidos antes de construir el MVP.
+* [tp5-sesion.md](tp5-sesion.md) - TP5, punto 3: situaciones, guion, qué se observa, cómo se registra y preguntas finales de la sesión (borrador a validar). Planilla en [../evidencia/tp5/plantilla-registro.md](../evidencia/tp5/plantilla-registro.md).
 
 ## Evaluación recibida sobre SPOTTER (TP4)
 

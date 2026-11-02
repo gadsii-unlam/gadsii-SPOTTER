@@ -1,5 +1,15 @@
 # Registro de cambios — docs/
 
+## 2026-11-02 — TP5: consigna y link del MVP
+* **Creation**: `docs/referencias/tp5-consigna.md`, transcripción de la consigna del TP5, con el
+  PDF original en `docs/referencias/originales/tp5-consigna.pdf`.
+* **Update**: `README.md` enlaza el MVP publicado en GitHub Pages
+  (<https://gadsii-unlam.github.io/gadsii-SPOTTER/>), como pide la entrega del TP5.
+* **Creation**: `docs/evaluacion/tp5-sesion.md` (borrador, a validar por el equipo) y
+  `docs/evidencia/tp5/plantilla-registro.md`. La evidencia real de la sesión va en
+  `docs/evidencia/tp5/u1.md`, `u2.md` y `u3.md`.
+* **Creation**: `docs/evidencia/tp5/u2.md`, sesión de U2 realizada presencialmente.
+
 ## 2026-10-26 — TP5: MVP construido (local)
 * **Creation**: `src/index.html`, `src/app.js`, `src/data.js` y `tests/data.test.mjs`. Mapa,
   detalle, sin conexión y sábado, con las correcciones del TP4. Versión genérica (datos simulados

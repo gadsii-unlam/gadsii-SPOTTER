@@ -13,3 +13,4 @@ frontmatter (`sources`) de cada transcripción.
 * [tp4a-informe.md](tp4a-informe.md) - Informe que SPOTTER entregó al equipo Bananza (producto UNLaMigos).
 * [tp4a-informe-recibido.md](tp4a-informe-recibido.md) - Informe que UNLaM-Gym entregó sobre el wireframe de SPOTTER (transcripción manual, sin el original por datos personales de terceros).
 * [tp4b-respuesta.md](tp4b-respuesta.md) - Respuesta de SPOTTER: correcciones aceptadas, cuestionadas y cuáles entran al MVP del TP5.
+* [tp5-consigna.md](tp5-consigna.md) - Enunciado del TP5 (Construcción del MVP, Prueba y Aprendizaje).

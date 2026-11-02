@@ -8,6 +8,8 @@ Segmento de la comunidad UNLaM: Miembros activos de la comunidad UNLaM (estudian
 
 ## MVP (TP5)
 
+**MVP publicado:** <https://gadsii-unlam.github.io/gadsii-SPOTTER/>
+
 HTML/CSS/JS plano en `src/`, sin build. Para correrlo local (los módulos ES no cargan desde `file://`):
 
 ```sh
