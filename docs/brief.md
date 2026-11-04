@@ -46,6 +46,33 @@ ajena a la comunidad UNLaM. Detalle completo en
 
 ---
 
+## Versión 4 — TP5
+
+**Qué cambió respecto de la versión 3 y por qué:** el MVP salió del papel y se probó con U1,
+U2 y U3 (ver [`docs/evidencia/tp5/`](evidencia/tp5/)). La hipótesis de valor se sostiene contra
+el criterio escrito antes de la prueba: 2 de 3 usuarios cambiaron de playa por el dato de la app
+y ninguno pidió reservar con anticipación. Pero la prueba mostró un supuesto que no estaba
+escrito: el dato cambia la decisión sólo si el usuario le cree. U1 vio La Paz LLENA y fue igual
+("A esta hora siempre hay lugar en La Paz"), y U2 y U3 dudaron del origen del dato. Por eso se
+agrega el supuesto de confianza en el dato y se cambia la gran visión: la ocupación se estima con
+los lectores de TelePase que la UNLaM va a instalar en cada playa, en lugar de cámaras y una API
+de la universidad. Eso elimina los supuestos de registro de autos y de conectividad de seguridad,
+y saca al personal de seguridad de los grupos de usuarios. También quedó claro que el producto
+resuelve una parte del problema (la vuelta inútil dentro de una playa llena) y no la demora antes
+de llegar. Análisis completo en
+[`docs/evaluacion/tp5-aprendizaje.md`](evaluacion/tp5-aprendizaje.md).
+
+**Estado de la hipótesis:** se sostiene (M1: 2 de 3; M2: 7 de 9; sin pedidos de reserva
+anticipada), condicionada a que el usuario confíe en el dato. M1 es la métrica que podría estar
+dando una lectura tranquilizadora: se midió con datos simulados que nunca fallaron.
+
+**Decisión:** perseverar. Lo próximo a construir es la tendencia por horario (si cada playa se
+está llenando o vaciando y a qué hora suele pasar), pedida por U2 y U3, y el acceso directo desde
+la pantalla principal del celular, pedido por U3. Correcciones menores de la interfaz: explicar
+en la leyenda qué significa CERRADA (que no abre, no que está llena).
+
+---
+
 ## El producto
 
 **Nombre:** SPOTTER.
@@ -64,19 +91,27 @@ ajena a la comunidad UNLaM. Detalle completo en
 
 ---
 
-## Integraciones previstas (TP1)
+## Integraciones previstas (gran visión, actualizada en el TP5)
 
-Estas integraciones no fueron confirmadas por la encuesta del TP2. Las APIs, cámaras y
-capacidades operativas de seguridad permanecen explícitamente como supuestos sin evidencia.
+La gran visión no se implementa en el TP. En el TP5 el equipo la cambia: la UNLaM va a instalar
+lectores de **TelePase** en el estacionamiento, y eso reemplaza la API de la universidad y las
+cámaras con reconocimiento de patente que preveía el TP1. Sigue siendo un supuesto sin evidencia
+(ver Supuestos).
 
 **Componentes de desarrollo propio:**
 - Front-end: aplicación web responsive.
-- Back-end: backend de negocio y backend de procesamiento de imágenes (patentes / caras).
+- Back-end: estima la ocupación de cada playa a partir de las entradas y salidas que registra
+  TelePase y la muestra como semáforo (LLENO / MEDIO / LIBRE).
 
 **Integraciones externas:**
-- **API:** verifica que la persona sea miembro activo de la comunidad UNLaM y que sea dueña del vehículo (auto / moto).
+- **TelePase:** lectores de tag en el acceso de cada playa. Los usuarios se anotan como
+  alumnos, docentes o nodocentes para entrar gratis; al resto se le cobra el ingreso. Ese
+  registro también resuelve la verificación de pertenencia a la comunidad UNLaM.
 - **Infraestructura:** servicio en la nube.
-- **Sensores:** cámaras en las entradas con integración de IA para reconocimiento de patente.
+
+**Límite aceptado:** no se sabe todavía si se va a poder entrar sin tag. Los autos que entren
+sin pasar por el lector son un error que se acepta: el producto da un estimado de semáforo, no
+un conteo exacto de lugares.
 
 ---
 
@@ -97,7 +132,6 @@ Miembros activos de la comunidad UNLaM (estudiantes de grado y posgrado, docente
 - **Estudiantes con bicicleta:** asisten en horarios específicos.
 - **Docentes y personal académico:** una demora buscando lugar retrasa el inicio de la clase; el producto les permite cumplir sus horarios sin estrés.
 - **Visitantes externos e invitados:** ajenos a la rutina universitaria (teatro, deportes); desconocen la dinámica de ocupación y buscan la tranquilidad de tener un lugar asegurado.
-- **Personal de seguridad (usuario operativo):** controlan accesos y egresos; buscan una herramienta que automatice la validación de patentes y reservas para agilizar su trabajo.
 
 ---
 
@@ -105,9 +139,11 @@ Miembros activos de la comunidad UNLaM (estudiantes de grado y posgrado, docente
 
 Grupo primario: **estudiantes con auto**. Es el grupo de mayor volumen de demanda diaria de
 consulta y reserva del estacionamiento, y el que permite un relevamiento homogéneo (una técnica,
-un instrumento, un mismo tipo de usuario) en el TP2. Docentes y personal de seguridad siguen
+un instrumento, un mismo tipo de usuario) en el TP2. Los docentes siguen
 caracterizados como grupos de usuarios del producto (ver arriba), pero no como foco primario del
 análisis de usuarios.
+El personal de seguridad deja de ser un grupo de usuarios en el TP5: con TelePase la
+validación del acceso la hace el lector. Volvería sólo si la gran visión suma cámaras a TelePase.
 
 > **Validado en el TP2 (31/08/2026):** el relevamiento con U1, U2 y U3 confirma que
 > "estudiantes con auto" es el foco correcto — ver
@@ -159,10 +195,11 @@ completo y trazabilidad en
 Estado de cada supuesto tras el relevamiento del TP2 (detalle y evidencia en [`docs/usuarios/supuestos-confrontacion.md`](usuarios/supuestos-confrontacion.md)):
 
 - Los estudiantes en auto esperan de 10 a 15 minutos en horario pico para estacionar. — **Confirmado, con matices:** el piso del rango es correcto, pero buena parte de la demora ocurre en el acceso/calle antes de llegar a la playa, no sólo dentro de ella.
-- No hay sistema de registro de autos en la UNLaM. — **Sin evidencia (pendiente):** no verificable encuestando estudiantes; depende de consultar a seguridad.
-- Existen APIs para comunicarse con el sistema de alumnos/docentes de la UNLaM. — **Sin evidencia (pendiente):** depende del área de sistemas.
-- Hay cámaras que apuntan a la entrada y salida del estacionamiento. — **Sin evidencia (pendiente):** depende de observación directa en los accesos.
-- El personal de seguridad cuenta con conectividad a internet y un dispositivo móvil en las garitas para validar reservas en tiempo real. — **Sin evidencia (pendiente):** depende de consultar al personal de seguridad.
+- Existen APIs para comunicarse con el sistema de alumnos/docentes de la UNLaM. — **Reemplazado en el TP5:** la pertenencia a la comunidad la da el registro en TelePase.
+- Hay cámaras que apuntan a la entrada y salida del estacionamiento. — **Reemplazado en el TP5:** el dato de entradas y salidas lo dan los lectores de TelePase.
+- **[TP5]** La UNLaM va a instalar lectores de TelePase en el acceso de cada playa (Perón y La Paz por separado), con ingreso gratis para la comunidad registrada y pago para el resto. — **Sin evidencia (supuesto de la gran visión, no se implementa en el TP):** reemplaza a los supuestos de registro de autos y de conectividad de seguridad del TP1.
+- **[TP5]** SPOTTER va a poder obtener de TelePase las entradas y salidas, o al menos un dato del que estimar la ocupación de cada playa. Si se puede entrar sin tag no se sabe; ese error se acepta porque el dato es un estimado de semáforo. — **Sin evidencia (supuesto de la gran visión):** surge como respuesta a la desconfianza en el dato observada en la prueba del TP5 (ver [`docs/evaluacion/tp5-aprendizaje.md`](evaluacion/tp5-aprendizaje.md#6-pivotar-o-perseverar)).
+- **[TP5]** El usuario confía en el dato de la app lo suficiente como para cambiar la decisión que ya traía. — **En riesgo:** U2 y U3 cambiaron de playa por el dato pero dudaron de su origen; U1 no le creyó y fue a una playa LLENA ("A esta hora siempre hay lugar en La Paz"). Con datos simulados no se pudo probar qué pasa después de que el dato falle.
 - **[CRÍTICO]** La comunidad universitaria está dispuesta a planificar y reservar su lugar con anticipación en lugar de buscarlo al llegar. — **Refutado (parcialmente):** los tres usuarios piden información de disponibilidad en tiempo real; U2 y U3 la requieren por playa y sólo U1 propone un bloqueo de pocos minutos — no una reserva planificada con antelación. Ver implicancia para el producto en la Hipótesis de valor (TP2) más arriba.
 
 ---
