@@ -1,5 +1,15 @@
 # Registro de cambios — docs/
 
+## 2026-11-03 — TP5: sesiones de U1 y U3 y estructura del aprendizaje
+* **Creation**: `docs/evidencia/tp5/u1.md` y `u3.md`, con las notas de sesión del equipo.
+  Tiempos de U1 y U3: promedio informado (~5 s), no por decisión.
+* **Creation**: `docs/evaluacion/tp5-aprendizaje.md` (borrador), puntos 5 a 10.
+* **Update**: `docs/brief.md` con el esqueleto de la versión 4, a completar por el equipo.
+* **Update**: `docs/brief.md`, gran visión: TelePase reemplaza la API de la UNLaM y las cámaras
+  del TP1 como fuente del dato (decisión del equipo; supuesto sin evidencia, no se implementa).
+* **Update**: `docs/brief.md`, se eliminan los supuestos de registro de autos y de conectividad
+  de seguridad, se agregan dos supuestos de TelePase y se quita el grupo "personal de seguridad".
+
 ## 2026-11-02 — TP5: consigna y link del MVP
 * **Creation**: `docs/referencias/tp5-consigna.md`, transcripción de la consigna del TP5, con el
   PDF original en `docs/referencias/originales/tp5-consigna.pdf`.
