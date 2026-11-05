@@ -1,0 +1,21 @@
+flowchart TB
+    U["Usuario"] -->|"Consulta playas y solicita actualizar"| UI
+    M["Moderador de las pruebas"] -->|"Configura parámetros en la URL"| APP
+    HOST["GitHub Pages<br/>Aloja los archivos estáticos"]
+    HOST -->|"Entrega HTML, CSS, JavaScript y fuentes"| UI
+
+    subgraph B["Navegador del usuario"]
+        UI["Interfaz — index.html + styles.css<br/>Vista general, detalle y avisos<br/>CONSTRUIDA"]
+        APP["Control de la aplicación — app.js<br/>Navegación, eventos, actualización<br/>y generación de las vistas<br/>CONSTRUIDO"]
+        DATA["Simulador — data.js<br/>Tablas de ocupación por horario<br/>y lectura de escenarios<br/>OCUPACIÓN SIMULADA"]
+        MEM["Memoria de ejecución<br/>Estados de las playas y fecha de actualización"]
+        SESSION["sessionStorage<br/>Escenario de prueba de la pestaña"]
+        ENV["APIs del navegador<br/>Reloj, URL y estado de conexión"]
+        UI -->|"Eventos de interacción"| APP
+        APP -->|"Genera y actualiza el contenido"| UI
+        APP -->|"Solicita ocupación o interpreta escenario"| DATA
+        DATA -->|"Devuelve estados simulados"| APP
+        APP -->|"Consulta y modifica"| MEM
+        APP -->|"Guarda y recupera el escenario"| SESSION
+        APP -->|"Consulta"| ENV
+    end
