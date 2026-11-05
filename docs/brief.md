@@ -73,6 +73,12 @@ en la leyenda qué significa CERRADA (que no abre, no que está llena).
 
 ---
 
+## Versión 5 — TP6
+
+**Qué cambió respecto de la versión 4 y por qué:** se incorpora la arquitectura de la gran visión, tomando como base el producto del TP1 y la integración con TelePase propuesta en el TP5. Se definen un backend para centralizar las operaciones, una base de datos persistente y una integración con el sistema de acceso para obtener los movimientos de cada playa. Se proponen ASP.NET Core y PostgreSQL, y se explicitan las restricciones de conectividad, las dependencias externas y el riesgo de calcular una ocupación incorrecta. Las reservas se conservan como parte de la visión ampliada; no pertenecen al MVP ni constituyen una necesidad validada por los usuarios.
+
+---
+
 ## El producto
 
 **Nombre:** SPOTTER.
@@ -88,6 +94,16 @@ en la leyenda qué significa CERRADA (que no abre, no que está llena).
 - **Consulta de ocupación por playa:** visualización en tiempo real de Perón y La Paz para decidir el destino antes de ingresar a una fila.
 - **Alertas configurables:** notificaciones próximas al horario de cursada y desactivación en días sin actividad académica.
 - **Bloqueo corto:** reserva de cortesía por pocos minutos durante la aproximación; surgió en U1 y queda como hipótesis a validar, no como reserva anticipada por franjas.
+
+---
+
+## Arquitectura e integraciones de la gran visión (TP6)
+
+La visión de SPOTTER contempla una aplicación web conectada a un backend que centralice la consulta de ocupación y la gestión de reservas, con una base de datos persistente para playas, capacidades, movimientos, usuarios y reservas. Se proponen **ASP.NET Core** para el backend y **PostgreSQL** para la persistencia, sujetos a la infraestructura disponible y las capacidades de mantenimiento.
+
+La integración con TelePase se realizaría mediante el sistema de acceso del estacionamiento. Los lectores y antenas RFID identificarían los tags de los vehículos en las entradas y salidas de cada playa. SPOTTER recibiría esos movimientos y estimaría la disponibilidad según la capacidad de cada estacionamiento. Este mecanismo reemplaza al reconocimiento de patentes previsto en el TP1. Todavía deben confirmarse el equipamiento, el acceso a los registros y el mecanismo de intercambio.
+
+La conectividad irregular relevada en el TP2 exige respuestas pequeñas, fecha de actualización visible y conservación del último dato disponible ante una interrupción. El principal riesgo es que movimientos omitidos o duplicados desajusten la ocupación estimada; será necesario validar el cálculo contra conteos observados y definir mecanismos de corrección.
 
 ---
 
