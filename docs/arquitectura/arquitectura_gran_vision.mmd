@@ -1,0 +1,37 @@
+flowchart TB
+    USER["Usuario"] --> QUERY
+    USER --> RESUI
+
+    subgraph CLIENT["Aplicación web SPOTTER"]
+        QUERY["Consulta de ocupación por playa<br/>COBERTURA PARCIAL DEL MVP:<br/>interfaz de Perón y La Paz con datos simulados"]
+        RESUI["Gestión de reservas<br/>Funcionalidad de la visión original"]
+    end
+
+    subgraph CLOUD["Backend de SPOTTER en la nube"]
+        API["API de SPOTTER<br/>Consultas y operaciones de la aplicación"]
+        OCC["Gestión de ocupación<br/>Estima disponibilidad por playa<br/>a partir de ingresos, egresos y capacidad"]
+        RES["Gestión de reservas<br/>Disponibilidad y vigencia"]
+        ADAPTER["Integración con el sistema de acceso<br/>Recibe y valida movimientos<br/>Evita procesar eventos duplicados"]
+        DB[("Base de datos persistente<br/>Playas, capacidades, movimientos,<br/>ocupación, usuarios y reservas")]
+        API --> OCC
+        API --> RES
+        RES -->|"Consulta disponibilidad"| OCC
+        OCC --> DB
+        RES --> DB
+        ADAPTER -->|"Ingreso o egreso confirmado por playa"| OCC
+        ADAPTER -->|"Registra movimientos"| DB
+    end
+
+    subgraph ACCESS["Sistema de acceso del estacionamiento integrado con TelePase"]
+        READER["Lectores y antenas RFID<br/>en entradas y salidas de cada playa"]
+        CONTROL["Control de acceso<br/>Identifica el vehículo y registra su paso"]
+        READER -->|"Identificador del tag y punto de lectura"| CONTROL
+    end
+
+    TAG["Tag TelePase del vehículo"] -->|"Identificación por radiofrecuencia"| READER
+    CONTROL <-->|"Validación del tag y su habilitación<br/>Integración por confirmar"| TP["Servicio TelePase<br/>Sistema externo"]
+    CONTROL -->|"Movimientos de entrada y salida<br/>Mecanismo de intercambio por confirmar"| ADAPTER
+    QUERY <-->|"Consulta y respuesta de ocupación real — futuro"| API
+    RESUI <-->|"Solicitud y resultado de reserva — futuro"| API
+
+    style QUERY fill:#d9ead3,stroke:#38761d,stroke-width:3px,color:#000000
